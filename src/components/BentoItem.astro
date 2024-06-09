@@ -1,0 +1,33 @@
+---
+import ClothesFakes from '../mocks/ClothesFakes.json'
+
+interface Products {
+  id: string
+  title: string
+  price: number
+  images: string[]
+}
+---
+
+{
+  ClothesFakes.slice(0, 16).map((product) => (
+    <div
+      class='rounded-xl
+backdrop-blue-md
+border border-black/10
+shadow-inner shadow-white/10 col-span-2
+text-center 
+flex justify-center items-end pb-5 bg-white
+overflow-hidden relative
+'
+    >
+      <ul>
+        <li value={product.id}>
+          <img src={product.images[1]} alt={`imagen de ${product.title}`} />
+          <h1 class='text-xl font-bold'>{product.title}</h1>
+          <span class='0'>${product.price}</span>
+        </li>
+      </ul>
+    </div>
+  ))
+}

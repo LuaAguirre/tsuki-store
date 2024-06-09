@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Title from '../components/Title.astro'
+import Products from '../components/Products.astro'
+import Bento from '../components/Bento.astro'
+import Footer from '../components/Footer.astro'
+import ImageAnime from '../components/ImageAnime.astro'
+import Search from '../components/Search.astro'
+---
+
+<Layout
+  title='Bienvenido a tsuki.'
+  description='Descubre ropa urbana única y moderna inspirada en tu anime favorito. En tsuki encontrarás camisetas, sudaderas, gorras y más, con diseños originales y de alta calidad. ¡Envío gratuito a todo el mundo!'
+>
+  <Title />
+  <Search />
+  <main>
+    <Bento />
+    <Products />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style></style>

@@ -1,0 +1,19 @@
+---
+import BentoItem from './BentoItem.astro'
+---
+
+<section
+  class={`
+w-full
+grid grid-cols-8 auto-rows-[27rem] gap-4
+mx-auto p-20
+`}
+>
+  <BentoItem />
+</section>
+
+<style>
+  section {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+</style>
