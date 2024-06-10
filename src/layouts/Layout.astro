@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro'
+import Cart from '../components/Cart.astro'
 
 interface Props {
   title: string
@@ -21,6 +22,7 @@ const { title, description } = Astro.props
 
   <body>
     <Header />
+    <Cart />
     <slot />
   </body>
 </html>

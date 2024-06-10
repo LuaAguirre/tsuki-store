@@ -1,1 +1,38 @@
-<div></div>
+---
+import IconCart from './icons/IconCart.astro'
+---
+
+<div>
+  <label
+    class='cart-button
+  items-center flex justify-center p-1 absolute right-16 top-5 z-20'
+    for='cart-button'
+  >
+    <IconCart />
+  </label>
+  <input id='cart-button' type='checkbox' hidden />
+
+  <aside class='cart
+  hidden bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10'>
+    <ul>
+      <li class='border rounded-xl border-zinc-300 overflow-hidden'>
+        <img src='https://i.imgur.com/vzrTgUR.jpeg' alt='Jogger' class='w-full' />
+        <div class='flex justify-center'>
+          <strong>Jogger</strong> -$24
+        </div>
+
+        <footer class='flex gap-2 justify-center items-center'>
+          <small> Qty: 1 </small>
+          <button class='p-2'>+</button>
+        </footer>
+      </li>
+    </ul>
+  </aside>
+</div>
+
+<style>
+  .cart-button ~ input:checked ~ .cart {
+    height: 100%;
+    display: block;
+  }
+</style>
