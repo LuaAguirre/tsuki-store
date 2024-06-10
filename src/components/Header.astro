@@ -1,11 +1,9 @@
-<nav class='flex h-16 justify-center items-center gap-7'>
-  <a href='#camisetas'>Camisetas</a>
-  <a href='#shorts'>Shorts</a>
-  <a href='#sudaderas'>Sudaderas</a>
-</nav>
+---
+import Navbar from './header/Navbar.astro'
+import Search from './header/Search.astro'
+import Title from './header/Title.astro'
+---
 
-<style>
-  a {
-    font-weight: 700;
-  }
-</style>
+<Navbar />
+<Title />
+<Search />
