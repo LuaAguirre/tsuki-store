@@ -1,11 +1,13 @@
 ---
 import IconSearch from '../icons/IconSearch.astro'
+import Categories from './Categories.astro'
 ---
 
-<form class='flex justify-center gap-4 w-10/12 mx-auto'>
+<form class='flex justify-center gap-4 w-10/12 mx-auto bg-black'>
   <div class='flex rounded-lg border border-zinc-300 bg-[#f6f6f6] w-60 h-9 gap-2 p-1'>
     <IconSearch />
     <input type='text' placeholder='Shorts, T-Shirt, Headphones...' class='bg-transparent w-48' />
   </div>
   <button class='rounded-lg border border-zinc-300 bg-[#f6f6f6] px-3'>Search</button>
+  <Categories />
 </form>
