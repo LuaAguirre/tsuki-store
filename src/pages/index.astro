@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Bento from '../components/Bento.astro'
+import { Bento } from '../components/Bento'
 import Footer from '../components/Footer.astro'
 ---
 
@@ -15,4 +15,8 @@ import Footer from '../components/Footer.astro'
   <Footer />
 </Layout>
 
-<style></style>
+<style>
+  main {
+    overflow: hidden;
+  }
+</style>

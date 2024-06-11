@@ -12,13 +12,20 @@ import IconCart from './icons/IconCart.astro'
   </label>
   <input id='cart-button' type='checkbox' hidden />
 
-  <aside class='cart
-  hidden bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10'>
+  <aside
+    class='cart
+  hidden bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10'
+  >
     <ul>
-      <li class='border rounded-xl border-zinc-300 overflow-hidden'>
-        <img src='https://i.imgur.com/vzrTgUR.jpeg' alt='Jogger' class='w-full' />
-        <div class='flex justify-center'>
-          <strong>Jogger</strong> -$24
+      <li class='flex flex-col gap-2
+            rounded border p-2'>
+        <img
+          src='https://i.imgur.com/vzrTgUR.jpeg'
+          alt='Jogger'
+          class='w-full rounded block object-cover'
+        />
+        <div class='flex justify-center text-sm'>
+          <strong class='text-sm font-semibold'>Jogger</strong> -$24
         </div>
 
         <footer class='flex gap-2 justify-center items-center'>
