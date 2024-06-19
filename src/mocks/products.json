@@ -1,4 +1,5 @@
-[
+{
+  "products": [
     {
       "id": 8,
       "title": "Classic Red Jogger Sweatpants",
@@ -2025,4 +2026,4 @@
         "updatedAt": "2024-06-08T06:14:54.000Z"
       }
     }
-  ]
+  ]}
