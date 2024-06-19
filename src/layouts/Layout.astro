@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro'
 import Cart from '../components/Cart.astro'
+import { App } from '../components/App'
 
 interface Props {
   title: string
@@ -14,9 +15,19 @@ const { title, description } = Astro.props
 <html lang='es'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content={description} />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta
+      name='description'
+      content={description}
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
     <title>{title}</title>
   </head>
 

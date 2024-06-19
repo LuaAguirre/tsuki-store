@@ -6,16 +6,18 @@ import IconCart from './icons/IconCart.astro'
   <label
     class='cart-button
   items-center flex justify-center p-1 absolute right-16 top-5 z-20 cursor-pointer hover:scale-150'
-    for='cart-button'
-  >
+    for='cart-button'>
     <IconCart />
   </label>
-  <input id='cart-button' type='checkbox' hidden />
+  <input
+    id='cart-button'
+    type='checkbox'
+    hidden
+  />
 
   <aside
     class='cart
-  hidden bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10'
-  >
+  hidden bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10'>
     <ul>
       <li class='flex flex-col gap-2
             rounded border p-2'>
