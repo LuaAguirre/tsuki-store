@@ -1,5 +1,8 @@
 import '../styles/Products.css'
 import { IconAddCart } from './icons/IconAddCart'
+import { useStore } from '../stores/useStore'
+import { useEffect } from 'react'
+
 //interface Products {
   //id: string
   //title: string
@@ -8,6 +11,13 @@ import { IconAddCart } from './icons/IconAddCart'
 //}
 
 export function Products({products}) {
+  const setCart = useStore(state => state.setCart)
+  const cart = useStore(state => state.cart)
+
+  useEffect(() => {
+    console.log('Cart:', cart);
+  }, [cart]);
+
   return (
     <div className='
     w-full flex justify-center items-center
@@ -26,7 +36,7 @@ export function Products({products}) {
               </div>
 
               <div className='flex justify-center'>
-                <button className='hover:scale-110'><IconAddCart/></button>
+                <button onClick={() => setCart(product)} className='hover:scale-110'><IconAddCart/></button>
               </div>
             </li>
 
