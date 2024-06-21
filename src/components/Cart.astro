@@ -1,5 +1,6 @@
 ---
 import IconCart from './icons/IconCart.astro'
+import IconCartRemove from './icons/IconCartRemove.astro'
 ---
 
 <div>
@@ -17,7 +18,7 @@ import IconCart from './icons/IconCart.astro'
 
   <aside
     class='cart
-  hidden bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10'>
+   bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10 flex flex-col items-center'>
     <ul>
       <li class='flex flex-col gap-2
             rounded border p-2'>
@@ -30,12 +31,16 @@ import IconCart from './icons/IconCart.astro'
           <strong class='text-sm font-semibold'>Jogger</strong> -$24
         </div>
 
-        <footer class='flex gap-2 justify-center items-center'>
+        <footer class='flex justify-center items-center gap-2'>
           <small> Qty: 1 </small>
-          <button class='p-2'>+</button>
+          <button class='p-2 hover:scale-110'>+</button>
         </footer>
       </li>
     </ul>
+
+    <button class='hover:scale-110 border rounded-sm p-1 mt-2'>
+      <IconCartRemove />
+    </button>
   </aside>
 </div>
 

@@ -26,7 +26,7 @@ export function Products({products}) {
               </div>
 
               <div className='flex justify-center'>
-                <button><IconAddCart/></button>
+                <button className='hover:scale-110'><IconAddCart/></button>
               </div>
             </li>
 
