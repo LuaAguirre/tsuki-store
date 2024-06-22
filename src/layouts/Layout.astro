@@ -1,6 +1,6 @@
 ---
 import Header from '../components/Header.astro'
-import Cart from '../components/cart/Cart.astro'
+import Cart from '../components/cart/Cart'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 
 interface Props {
@@ -34,7 +34,7 @@ const { title, description } = Astro.props
 
   <body>
     <Header />
-    <Cart />
+    <Cart client:load />
     <slot />
     <style is:global>
       :root {

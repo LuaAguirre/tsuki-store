@@ -1,4 +1,4 @@
-export default function CartItem ({ title, images, price, quantity }) {
+export default function CartItem ({ title, images, price, quantity, setCart }) {
     return (
         <li class='flex flex-col gap-2
             rounded border p-2'>
@@ -13,7 +13,7 @@ export default function CartItem ({ title, images, price, quantity }) {
 
         <footer class='flex justify-center items-center gap-2'>
           <small> Qty: {quantity} </small>
-          <button class='p-2 hover:scale-110'>+</button>
+          <button onClick={setCart} class='p-2 hover:scale-110'>+</button>
         </footer>
       </li>
     )

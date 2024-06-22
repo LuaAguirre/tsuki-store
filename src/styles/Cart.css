@@ -1,0 +1,4 @@
+.cart-button ~ input:checked ~ .cart {
+  height: 100%;
+  display: block;
+}

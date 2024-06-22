@@ -23,6 +23,3 @@ const useCartStore = create((set) => ({
 }))
 
 export { useCartStore }
-
-//manera basica de agregar un producto al carrito
-//setCart: product => set((state) => ({ cart: [...state.cart, product] })),
