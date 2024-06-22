@@ -3,6 +3,7 @@ import IconCart from '../icons/IconCart'
 import CartRemoveButton from './CartRemoveButton'
 import { useCartStore } from '../../stores/useCartStore'
 
+
 export default function Cart () {
   const cart = useCartStore((state) => state.cart)
   const setCart = useCartStore((state) => state.setCart)
@@ -23,7 +24,7 @@ export default function Cart () {
 
   <aside
     className='cart
-   bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10 flex flex-col items-center'>
+   bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10 hidden'>
     <ul> 
       {
         cart.map(item => (
@@ -47,7 +48,7 @@ export default function Cart () {
       }
     </ul>
 
-    <CartRemoveButton />
+    <CartRemoveButton className='' />
 
 
   </aside>
