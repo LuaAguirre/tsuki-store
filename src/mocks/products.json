@@ -767,9 +767,7 @@
       "title": "New Product",
       "price": 10,
       "description": "A description",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T00:24:57.000Z",
       "updatedAt": "2024-06-08T00:24:57.000Z",
       "category": {
@@ -785,9 +783,7 @@
       "title": "producto1",
       "price": 88,
       "description": "desc",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T03:26:11.000Z",
       "updatedAt": "2024-06-08T03:26:11.000Z",
       "category": {
@@ -803,9 +799,7 @@
       "title": "producto1",
       "price": 88,
       "description": "desc",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T03:28:40.000Z",
       "updatedAt": "2024-06-08T03:28:40.000Z",
       "category": {
@@ -821,9 +815,7 @@
       "title": "producto1",
       "price": 88,
       "description": "desc",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T03:44:26.000Z",
       "updatedAt": "2024-06-08T03:44:26.000Z",
       "category": {
@@ -839,9 +831,7 @@
       "title": "producto1",
       "price": 88,
       "description": "desc",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T03:45:04.000Z",
       "updatedAt": "2024-06-08T03:45:04.000Z",
       "category": {
@@ -857,9 +847,7 @@
       "title": "producto1",
       "price": 88,
       "description": "desc",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T03:51:01.000Z",
       "updatedAt": "2024-06-08T03:51:01.000Z",
       "category": {
@@ -875,9 +863,7 @@
       "title": "producto1",
       "price": 88,
       "description": "desc",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T03:55:56.000Z",
       "updatedAt": "2024-06-08T03:55:56.000Z",
       "category": {
@@ -893,9 +879,7 @@
       "title": "New Product",
       "price": 10,
       "description": "2",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
+      "images": ["[\"https://placeimg.com/640/480/any\"]"],
       "creationAt": "2024-06-08T06:01:50.000Z",
       "updatedAt": "2024-06-08T06:01:50.000Z",
       "category": {
@@ -2026,4 +2010,5 @@
         "updatedAt": "2024-06-08T06:14:54.000Z"
       }
     }
-  ]}
+  ]
+}
