@@ -1,0 +1,35 @@
+---
+import IconCart from '../icons/IconCart.astro'
+import CartRemoveButton from '../cart/CartRemoveButton'
+import CartItem from './CartItem'
+import { useCartStore } from '../../stores/useCartStore'
+---
+
+<div>
+  <label
+    class='cart-button
+  items-center flex justify-center p-1 absolute right-16 top-5 z-20 cursor-pointer hover:scale-150'
+    for='cart-button'>
+    <IconCart />
+  </label>
+  <input
+    id='cart-button'
+    type='checkbox'
+    hidden
+  />
+
+  <aside
+    class='cart
+   bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10 flex flex-col items-center'>
+    <ul> </ul>
+
+    <CartRemoveButton client:load />
+
+    <style>
+      .cart-button ~ input:checked ~ .cart {
+        height: 100%;
+        display: block;
+      }
+    </style>
+  </aside></div
+>

@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useStore = create((set) => ({
+const useCartStore = create((set) => ({
     cart: [],
     totalAmount: 0,
     setCart: product => set((state) => {
@@ -22,7 +22,7 @@ const useStore = create((set) => ({
     clearCart: () => set(state => ({ ...state, cart: [], totalAmount: 0 }))
 }))
 
-export { useStore }
+export { useCartStore }
 
 //manera basica de agregar un producto al carrito
 //setCart: product => set((state) => ({ cart: [...state.cart, product] })),

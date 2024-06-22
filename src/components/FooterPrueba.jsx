@@ -1,8 +1,8 @@
 import '../styles/FooterPrueba.css'
-import { useStore } from '../stores/useStore'
+import { useCartStore } from '../stores/useCartStore'
 
 export function FooterPrueba({ filters }) {
-  const cart = useStore(state => state.cart)
+  const cart = useCartStore(state => state.cart)
   return (
   <footer id='footer-filters'>
     {JSON.stringify(filters, null, 2)}

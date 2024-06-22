@@ -1,6 +1,6 @@
 import '../styles/Products.css'
 import { IconAddCart } from './icons/IconAddCart'
-import { useStore } from '../stores/useStore'
+import { useCartStore } from '../stores/useCartStore'
 import { useEffect } from 'react'
 
 //interface Products {
@@ -11,8 +11,8 @@ import { useEffect } from 'react'
 //}
 
 export function Products({products}) {
-  const setCart = useStore(state => state.setCart)
-  const cart = useStore(state => state.cart)
+  const setCart = useCartStore(state => state.setCart)
+  const cart = useCartStore(state => state.cart)
 
   useEffect(() => {
     console.log('Cart:', cart);
