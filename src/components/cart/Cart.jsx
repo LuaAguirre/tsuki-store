@@ -8,6 +8,10 @@ export default function Cart() {
   const setCart = useCartStore((state) => state.setCart)
   const clearCart = useCartStore((state) => state.clearCart)
 
+  const handleAddToCart = (product) => {
+    setCart(product)
+  }
+
   return (
     <div>
       <label
@@ -24,7 +28,7 @@ export default function Cart() {
 
       <aside
         className='cart
-   bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10 hidden'>
+   bg-white/90 fixed right-0 top-0 w-1/5 p-8 pt-20 z-10 hidden overflow-y-auto'>
         <ul className='flex flex-col justify-center gap-4'>
           {cart.map((item) => (
             <li
@@ -39,14 +43,14 @@ export default function Cart() {
               <div className='flex justify-center text-sm'>
                 <strong className='text-sm font-semibold'>
                   {item.product.title}
-                </strong>{' '}
+                </strong>
                 - ${item.product.price}
               </div>
 
               <footer className='flex justify-center items-center gap-2'>
                 <small> Qty: {item.quantity} </small>
                 <button
-                  onClick={() => setCart(item)}
+                  onClick={() => handleAddToCart(item.product)}
                   className='p-2 hover:scale-110'>
                   +
                 </button>
