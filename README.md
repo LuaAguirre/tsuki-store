@@ -1,4 +1,4 @@
 Tasks:
 
-- Visual glitch at add productos from button '+' in cart
+- Add button - in cart
 - Nav buttons

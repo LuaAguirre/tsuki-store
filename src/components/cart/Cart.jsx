@@ -7,9 +7,13 @@ export default function Cart() {
   const cart = useCartStore((state) => state.cart)
   const setCart = useCartStore((state) => state.setCart)
   const clearCart = useCartStore((state) => state.clearCart)
+  const removeCart = useCartStore((state) => state.removeCart)
 
   const handleAddToCart = (product) => {
     setCart(product)
+  }
+  const handleRemoveToCart = (product) => {
+    removeCart(product)
   }
 
   return (
@@ -53,6 +57,9 @@ export default function Cart() {
                   onClick={() => handleAddToCart(item.product)}
                   className='p-2 hover:scale-110'>
                   +
+                </button>
+                <button onClick={() => handleRemoveToCart(item.product)}>
+                  -
                 </button>
               </footer>
             </li>
