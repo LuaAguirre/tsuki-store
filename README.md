@@ -1,4 +1,4 @@
 Tasks:
 
-- Add button - in cart
+- Fix search
 - Nav buttons

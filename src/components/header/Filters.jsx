@@ -1,4 +1,5 @@
 import { useId } from 'react'
+import Search from './Search'
 
 export function Filters({ filters, setFilters }) {
   const minPriceFilterId = useId()
@@ -20,11 +21,7 @@ export function Filters({ filters, setFilters }) {
   return (
     <section className='flex flex-row justify-evenly'>
       <div className='flex gap-4'>
-        <label
-          
-          htmlFor={categoryFilterId}>
-          Category:
-        </label>
+        <label htmlFor={categoryFilterId}>Category:</label>
         <select
           id={categoryFilterId}
           onChange={handleChangeCategory}
@@ -38,8 +35,10 @@ export function Filters({ filters, setFilters }) {
         </select>
       </div>
 
+      <Search />
+
       <div className='flex gap-4'>
-        <label htmlFor={minPriceFilterId}>Precio:</label>
+        <label htmlFor={minPriceFilterId}>Price:</label>
         <input
           type='range'
           min='0'
