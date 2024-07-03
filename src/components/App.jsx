@@ -10,6 +10,8 @@ export function App() {
     category: 'all'
   })
 
+  const [search, setSearch] = useState('')
+
   const filterProducts = (products) => {
     return products?.filter((product) => {
       return (
@@ -20,13 +22,20 @@ export function App() {
     })
   }
 
-  const filteredProducts = filterProducts(initialProducts)
+  const filteredProducts = filterProducts(initialProducts).filter((product) => {
+    return (
+      product.title.toLowerCase().includes(search.toLowerCase()) ||
+      product.description.toLowerCase().includes(search.toLowerCase())
+    )
+  })
 
   return (
     <>
       <Filters
         filters={filters}
         setFilters={setFilters}
+        search={search}
+        setSearch={setSearch}
       />
       <Products products={filteredProducts} />
     </>

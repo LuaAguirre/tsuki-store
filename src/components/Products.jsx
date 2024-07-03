@@ -4,7 +4,6 @@ import { useCartStore } from '../stores/useCartStore'
 
 export function Products({ products }) {
   const setCart = useCartStore((state) => state.setCart)
-  const cart = useCartStore((state) => state.cart)
 
   return (
     <div

@@ -1,26 +1,21 @@
 import { create } from "zustand"
+import { products as initialProducts } from '@/mocks/products.json'
 
 const useFilterStore = create((set) => ({
-    minPrice: 0,
-    category: 'all',
-    setMinPrice: () => set((state) => {
-        const filteredMinPrice = state?.filter(item => {
-            item.price >= state.minPrice
+    filters: { minPrice: 0, category: 'all' },
+    setFilters: () => set((state) => {
+        const filterProducts = (products) => products?.filter(product => {
+            product.price >= state.filters.minPrice &&
+                (state.filters.category === product.category.name
+                    || state.filters.category === 'all')
         })
 
-        return {
-            minPrice: filteredMinPrice
-        }
-    }),
-    setCategory: () => set((state) => {
-        const filteredCategory = state?.filter(item => {
-            item.category.name === state.category || state.category === 'all'
-        })
+        const filteredProducts = filterProducts(initialProducts)
 
         return {
-            category: filteredCategory
+            filters: filteredProducts
         }
-    }),
+    })
 }))
 
 export { useFilterStore }

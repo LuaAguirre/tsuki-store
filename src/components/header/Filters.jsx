@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import Search from './Search'
 
-export function Filters({ filters, setFilters }) {
+export function Filters({ filters, setFilters, search, setSearch }) {
   const minPriceFilterId = useId()
   const categoryFilterId = useId()
 
@@ -35,7 +35,10 @@ export function Filters({ filters, setFilters }) {
         </select>
       </div>
 
-      <Search />
+      <Search
+        search={search}
+        setSearch={setSearch}
+      />
 
       <div className='flex gap-4'>
         <label htmlFor={minPriceFilterId}>Price:</label>
