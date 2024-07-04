@@ -1,9 +1,12 @@
 import { useId } from 'react'
 import Search from './Search'
+import { useFilterStore } from '@/stores/useFilterStore'
 
-export function Filters({ filters, setFilters, search, setSearch }) {
+export function Filters() {
   const minPriceFilterId = useId()
   const categoryFilterId = useId()
+  const filters = useFilterStore((state) => state.filters)
+  const setFilters = useFilterStore((state) => state.setFilters)
 
   const handleChangeCategory = (event) => {
     setFilters((prevState) => ({
@@ -35,10 +38,7 @@ export function Filters({ filters, setFilters, search, setSearch }) {
         </select>
       </div>
 
-      <Search
-        search={search}
-        setSearch={setSearch}
-      />
+      <Search />
 
       <div className='flex gap-4'>
         <label htmlFor={minPriceFilterId}>Price:</label>

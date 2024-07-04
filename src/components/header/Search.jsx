@@ -1,7 +1,11 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { useSearchStore } from '@/stores/useSearchStore'
 
-export default function Search({ search, setSearch }) {
+export default function Search() {
+  const search = useSearchStore((state) => state.search)
+  const setSearch = useSearchStore((state) => state.setSearch)
+
   const handleChange = (event) => {
     const value = event.target.value
     setSearch(value) // Actualizar el término de búsqueda en el estado principal

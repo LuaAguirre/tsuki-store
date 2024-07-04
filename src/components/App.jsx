@@ -1,43 +1,19 @@
 import { Products } from './Products'
 import { Filters } from './header/Filters'
-import { products as initialProducts } from '../mocks/products.json'
 import { FooterPrueba } from './FooterPrueba'
-import { useState } from 'react'
+import { useSearchStore } from '@/stores/useSearchStore'
+import { useFilterStore } from '@/stores/useFilterStore'
 
 export function App() {
-  const [filters, setFilters] = useState({
-    minPrice: 0,
-    category: 'all'
-  })
+  const filteredProducts = useFilterStore((state) => state.filteredProducts)
+  const search = useSearchStore((state) => state.search)
 
-  const [search, setSearch] = useState('')
-
-  const filterProducts = (products) => {
-    return products?.filter((product) => {
-      return (
-        product.price >= filters.minPrice &&
-        (filters.category === 'all' ||
-          filters.category === product.category.name)
-      )
-    })
-  }
-
-  const filteredProducts = filterProducts(initialProducts).filter((product) => {
-    return (
-      product.title.toLowerCase().includes(search.toLowerCase()) ||
-      product.description.toLowerCase().includes(search.toLowerCase())
-    )
-  })
+  const productsToShow = filteredProducts(search)
 
   return (
     <>
-      <Filters
-        filters={filters}
-        setFilters={setFilters}
-        search={search}
-        setSearch={setSearch}
-      />
-      <Products products={filteredProducts} />
+      <Filters />
+      <Products products={productsToShow} />
     </>
   )
 }
