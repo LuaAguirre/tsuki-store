@@ -2,11 +2,9 @@ import { useId } from 'react'
 import Search from './Search'
 import { useFilterStore } from '@/stores/useFilterStore'
 
-export function Filters() {
+export function Filters({ filters, setFilters }) {
   const minPriceFilterId = useId()
   const categoryFilterId = useId()
-  const filters = useFilterStore((state) => state.filters)
-  const setFilters = useFilterStore((state) => state.setFilters)
 
   const handleChangeCategory = (event) => {
     setFilters((prevState) => ({

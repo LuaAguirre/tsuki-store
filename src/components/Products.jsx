@@ -1,8 +1,10 @@
 import '../styles/Products.css'
 import { IconAddCart } from './icons/IconAddCart'
 import { useCartStore } from '../stores/useCartStore'
+import { useFilterStore } from '@/stores/useFilterStore'
+import { useSearchStore } from '@/stores/useSearchStore'
 
-export function Products({ products }) {
+export function Products({ filteredProducts }) {
   const setCart = useCartStore((state) => state.setCart)
 
   return (
@@ -12,7 +14,7 @@ export function Products({ products }) {
      m-0 py-16 px-48 gap-4
     '>
       <ul className='grid gap-4 w-full'>
-        {products?.slice(0, 16).map((product) => (
+        {filteredProducts?.slice(0, 16).map((product) => (
           <li
             key={product.id}
             className='flex flex-col gap-4
