@@ -1,4 +1,7 @@
 Tasks:
 
-- Fix search
+- Fix useFilterStore
 - Nav buttons
+- MinPrice design
+- Add pay
+- Add Footer

@@ -1,15 +1,14 @@
 import { useId } from 'react'
 import Search from './Search'
-import { useFilterStore } from '@/stores/useFilterStore'
+import { SelectCategory } from './SelectCategory'
 
 export function Filters({ filters, setFilters }) {
   const minPriceFilterId = useId()
-  const categoryFilterId = useId()
 
-  const handleChangeCategory = (event) => {
+  const handleChangeCategory = (category) => {
     setFilters((prevState) => ({
       ...prevState,
-      category: event.target.value
+      category
     }))
   }
   const handleChangeMinPrice = (event) => {
@@ -20,26 +19,13 @@ export function Filters({ filters, setFilters }) {
   }
 
   return (
-    <section className='flex flex-row justify-evenly'>
-      <div className='flex gap-4'>
-        <label htmlFor={categoryFilterId}>Category:</label>
-        <select
-          id={categoryFilterId}
-          onChange={handleChangeCategory}
-          className='size-full bg-transparent'>
-          <option value='all'>All</option>
-          <option value='Clothess'>Clothes</option>
-          <option value='Electronics'>Electronics</option>
-          <option value='Furniture'>Furniture</option>
-          <option value='Shoes'>Shoes</option>
-          <option value='Miscellaneous'>Miscellaneous</option>
-        </select>
-      </div>
+    <section className='flex justify-evenly'>
+      <SelectCategory handleChangeCategory={handleChangeCategory} />
 
       <Search />
 
-      <div className='flex gap-4'>
-        <label htmlFor={minPriceFilterId}>Price:</label>
+      <div className='flex items-center gap-2'>
+        <label htmlFor={minPriceFilterId}>Min. Price:</label>
         <input
           type='range'
           min='0'

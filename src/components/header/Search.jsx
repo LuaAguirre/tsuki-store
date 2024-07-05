@@ -16,8 +16,10 @@ export default function Search() {
   }
 
   return (
-    <div className='flex w-full max-w-sm items-center space-x-2'>
-      <form onSubmit={handleSubmit}>
+    <div className='flex w-full max-w-sm'>
+      <form
+        onSubmit={handleSubmit}
+        className='flex gap-4 w-full max-w-sm'>
         <Input
           placeholder='Furnitures, clothes, etc...'
           value={search}
