@@ -1,7 +1,5 @@
 import { Products } from './Products'
 import { Filters } from './header/Filters'
-import { FooterPrueba } from './FooterPrueba'
-import { useFilterStore } from '@/stores/useFilterStore'
 import { useSearchStore } from '@/stores/useSearchStore'
 import { products as initialProducts } from '@/mocks/products.json'
 import { useState } from 'react'

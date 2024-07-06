@@ -1,17 +1,18 @@
 import '../styles/Products.css'
-import { IconAddCart } from './icons/IconAddCart'
 import { useCartStore } from '../stores/useCartStore'
-import { useFilterStore } from '@/stores/useFilterStore'
-import { useSearchStore } from '@/stores/useSearchStore'
+import { ToastAddCart } from './buttons/ToastAddCart'
 
 export function Products({ filteredProducts }) {
   const setCart = useCartStore((state) => state.setCart)
 
+  const handleAddToCart = (product) => {
+    setCart(product)
+  }
+
   return (
     <div
       className='
-    w-full flex justify-center items-center
-     m-0 py-16 px-48 gap-4
+    w-full flex justify-center items-center m-0 py-16 px-4 md:px-16 lg:px-48
     '>
       <ul className='grid gap-4 w-full'>
         {filteredProducts?.slice(0, 16).map((product) => (
@@ -31,11 +32,10 @@ export function Products({ filteredProducts }) {
             </div>
 
             <div className='flex justify-center'>
-              <button
-                onClick={() => setCart(product)}
-                className='hover:scale-110'>
-                <IconAddCart />
-              </button>
+              <ToastAddCart
+                product={product}
+                handleAddToCart={handleAddToCart}
+              />
             </div>
           </li>
         ))}

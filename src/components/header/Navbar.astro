@@ -1,5 +1,13 @@
+---
+import Cart from '@/components/cart/Cart'
+---
+
 <nav class='flex h-16 justify-center items-center gap-7 font-semibold'>
-  <a href='#camisetas'>Camisetas</a>
-  <a href='#shorts'>Shorts</a>
-  <a href='#sudaderas'>Sudaderas</a>
+  <a href='#camisetas'>News</a>
+  <a href='#shorts'>Discounts</a>
+  <a href='#sudaderas'>Top Sells</a>
+
+  <div>
+    <Cart client:load />
+  </div>
 </nav>

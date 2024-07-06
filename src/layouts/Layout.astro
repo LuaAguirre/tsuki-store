@@ -1,7 +1,8 @@
 ---
 import Header from '../components/Header.astro'
-import Cart from '../components/cart/Cart'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
+import Footer from '@/components/Footer.astro'
+import { Toaster } from '@/components/ui/toaster'
 
 interface Props {
   title: string
@@ -32,10 +33,11 @@ const { title, description } = Astro.props
     <ViewTransitions />
   </head>
 
-  <body>
+  <body class='px-5'>
     <Header />
-    <Cart client:load />
     <slot />
+    <Footer />
+    <Toaster client:load />
     <style is:global>
       :root {
         color-scheme: light;
