@@ -3,6 +3,7 @@ import { create } from "zustand"
 const useCartStore = create((set) => ({
     cart: [],
     totalAmount: 0,
+
     setCart: product => set((state) => {
         const productInCartIndex = state.cart.findIndex(item => item.product.id === product.id)
 
@@ -22,6 +23,7 @@ const useCartStore = create((set) => ({
         }
     }),
     clearCart: () => set(() => ({ cart: [], totalAmount: 0 })),
+
     removeCart: product => set((state) => {
         const productInCartIndex = state.cart.findIndex(item => item.product.id === product.id)
 

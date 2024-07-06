@@ -28,12 +28,14 @@ export default function Cart() {
     removeCart(product)
   }
 
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0)
+
   return (
     <div>
       <Sheet>
         <SheetTrigger asChild>
           <button className='cart-button items-center flex justify-center p-1 absolute right-16 top-5 z-20 cursor-pointer hover:scale-150'>
-            <IconCart />
+            <IconCart count={cartCount} />
           </button>
         </SheetTrigger>
 
