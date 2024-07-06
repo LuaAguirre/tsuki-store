@@ -8,7 +8,7 @@ import {
   PaginationPrevious
 } from '@/components/ui/pagination'
 
-export function Pagination() {
+export function PaginationProducts() {
   return (
     <Pagination>
       <PaginationContent>

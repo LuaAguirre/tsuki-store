@@ -3,6 +3,7 @@ import Header from '../components/Header.astro'
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import Footer from '@/components/Footer.astro'
 import { Toaster } from '@/components/ui/toaster'
+import { PaginationProducts } from '@/components/Pagination'
 
 interface Props {
   title: string
@@ -33,9 +34,10 @@ const { title, description } = Astro.props
     <ViewTransitions />
   </head>
 
-  <body class='px-5'>
+  <body>
     <Header />
     <slot />
+    <PaginationProducts />
     <Footer />
     <Toaster client:load />
     <style is:global>

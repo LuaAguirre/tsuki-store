@@ -6,35 +6,38 @@ const useCartStore = create((set) => ({
     setCart: product => set((state) => {
         const productInCartIndex = state.cart.findIndex(item => item.product.id === product.id)
 
+        let newCart
         if (productInCartIndex >= 0) {
-            const newCart = structuredClone(state.cart)
+            newCart = structuredClone(state.cart)
             newCart[productInCartIndex].quantity += 1
-
-            return {
-                cart: newCart
-            }
+        } else {
+            newCart = [...state.cart, { product, quantity: 1 }]
         }
 
+        const newTotalAmount = newCart.reduce((total, item) => total + item.product.price * item.quantity, 0)
+
         return {
-            cart: [...state.cart, { product, quantity: 1 }]
+            cart: newCart,
+            totalAmount: newTotalAmount
         }
     }),
-    clearCart: () => set(state => ({ ...state, cart: [], totalAmount: 0 })),
+    clearCart: () => set(() => ({ cart: [], totalAmount: 0 })),
     removeCart: product => set((state) => {
-        const removedProducts = state.cart.filter(item => item.product.id !== product.id)
         const productInCartIndex = state.cart.findIndex(item => item.product.id === product.id)
 
+        let newCart
         if (state.cart[productInCartIndex].quantity > 1) {
-            const newCart = structuredClone(state.cart)
+            newCart = structuredClone(state.cart)
             newCart[productInCartIndex].quantity -= 1
-
-            return {
-                cart: newCart
-            }
+        } else {
+            newCart = state.cart.filter(item => item.product.id !== product.id)
         }
 
+        const newTotalAmount = newCart.reduce((total, item) => total + item.product.price * item.quantity, 0)
+
         return {
-            cart: removedProducts
+            cart: newCart,
+            totalAmount: newTotalAmount
         }
     })
 }))

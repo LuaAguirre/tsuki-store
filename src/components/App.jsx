@@ -28,6 +28,7 @@ export function App() {
       product.description.toLowerCase().includes(search.toLowerCase())
     )
   })
+
   return (
     <>
       <Filters

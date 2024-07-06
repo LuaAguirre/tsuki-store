@@ -8,3 +8,4 @@ Tasks:
 - MinPrice design
 - Add pay
 - Edit Footer
+- Fix visual bug in products, fix price position

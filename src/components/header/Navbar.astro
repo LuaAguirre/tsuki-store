@@ -2,10 +2,12 @@
 import Cart from '@/components/cart/Cart'
 ---
 
-<nav class='flex h-16 justify-center items-center gap-7 font-semibold'>
-  <a href='#camisetas'>News</a>
-  <a href='#shorts'>Discounts</a>
-  <a href='#sudaderas'>Top Sells</a>
+<nav class='flex h-16 justify-center items-center font-semibold'>
+  <div class='flex gap-12'>
+    <a href='#news'>News</a>
+    <a href='#discounts'>Discounts</a>
+    <a href='#top-sells'>Top Sells</a>
+  </div>
 
   <div>
     <Cart client:load />
