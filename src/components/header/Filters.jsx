@@ -19,7 +19,7 @@ export function Filters({ filters, setFilters }) {
   }
 
   return (
-    <section className='flex flex-col md:flex-row justify-evenly items-center md:items-stretch gap-4 p-4'>
+    <section className='relative flex flex-col md:flex-row justify-evenly items-center md:items-stretch gap-4'>
       <div className='w-full md:w-auto'>
         <SelectCategory handleChangeCategory={handleChangeCategory} />
       </div>

@@ -34,7 +34,7 @@ export default function Cart() {
     <div>
       <Sheet>
         <SheetTrigger asChild>
-          <button className='cart-button items-center flex justify-center p-1 absolute right-16 top-5 z-20 cursor-pointer hover:scale-150'>
+          <button className='cart-button flex items-center z-20 cursor-pointer hover:scale-150'>
             <IconCart count={cartCount} />
           </button>
         </SheetTrigger>
@@ -84,21 +84,22 @@ export default function Cart() {
             <div className=' w-96 flex justify-between items-center'>
               <h2>Total: ${totalAmount.toFixed(2)}</h2>
 
-              <div>
+              <div className='flex gap-4'>
                 <SheetClose asChild>
                   <Button type='submit'>Buy</Button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button
+                    type='submit'
+                    variant='ghost'
+                    className='hover:bg-gray-200'
+                    onClick={() => clearCart()}>
+                    Clear
+                  </Button>
                 </SheetClose>
               </div>
             </div>
           </SheetFooter>
-
-          <div className='flex justify-center'>
-            <button
-              onClick={() => clearCart()}
-              className='hover:scale-110 border rounded-sm p-2'>
-              <IconCartRemove />
-            </button>
-          </div>
         </SheetContent>
       </Sheet>
     </div>

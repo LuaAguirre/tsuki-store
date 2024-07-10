@@ -30,12 +30,12 @@ export function App() {
   })
 
   return (
-    <>
+    <div className='flex flex-col gap-12'>
       <Filters
         filters={filters}
         setFilters={setFilters}
       />
       <Products filteredProducts={filteredProducts} />
-    </>
+    </div>
   )
 }

@@ -31,14 +31,18 @@ const { title, description } = Astro.props
       href='/favicon.svg'
     />
     <title>{title}</title>
+
     <ViewTransitions />
   </head>
 
   <body>
-    <Header />
-    <slot />
-    <PaginationProducts />
-    <Footer />
+    <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12'>
+      <Header />
+      <slot />
+      <PaginationProducts />
+      <Footer />
+    </div>
+
     <Toaster client:load />
     <style is:global>
       :root {
