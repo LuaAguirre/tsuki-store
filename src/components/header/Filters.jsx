@@ -19,17 +19,17 @@ export function Filters({ filters, setFilters }) {
   }
 
   return (
-    <section className='relative flex flex-col md:flex-row justify-evenly items-center md:items-stretch gap-4'>
-      <div className='w-full md:w-auto'>
+    <section className='relative grid grid-cols-2 auto-rows-max gap-4 gap-y-6 md:flex justify-evenly items-center md:items-stretch '>
+      <div className='w-full md:w-auto flex justify-center'>
         <SelectCategory handleChangeCategory={handleChangeCategory} />
       </div>
 
-      <div className='w-full md:w-auto'>
-        <Search />
-      </div>
-
-      <div className='flex items-center gap-2 w-full md:w-auto'>
-        <label htmlFor={minPriceFilterId}>Min. Price:</label>
+      <div className='flex justify-center items-center gap-2 w-full md:w-auto'>
+        <label
+          htmlFor={minPriceFilterId}
+          className='text-sm whitespace-nowrap'>
+          Min. Price:
+        </label>
         <input
           type='range'
           min='0'
@@ -40,6 +40,9 @@ export function Filters({ filters, setFilters }) {
           onChange={handleChangeMinPrice}
         />
         <span>${filters.minPrice}</span>
+      </div>
+      <div className='w-full md:w-auto col-span-2 flex justify-center'>
+        <Search />
       </div>
     </section>
   )
