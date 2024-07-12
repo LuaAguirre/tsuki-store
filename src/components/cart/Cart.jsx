@@ -1,6 +1,4 @@
-import '../../styles/Cart.css'
 import IconCart from '../icons/IconCart'
-import IconCartRemove from '../icons/IconCartRemove'
 import { useCartStore } from '../../stores/useCartStore'
 import {
   Sheet,

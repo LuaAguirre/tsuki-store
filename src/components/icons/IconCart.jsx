@@ -1,6 +1,6 @@
 export default function IconCart({ count }) {
   return (
-    <div>
+    <div className='relative'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width='25'
@@ -21,7 +21,7 @@ export default function IconCart({ count }) {
         <path d='M6 5l14 1l-1 7h-13'></path>
       </svg>
       {count > 0 && (
-        <span className='absolute top-0 right-0 bg-red-600 text-white rounded-full h-4 w-4 text-xs flex items-center justify-center'>
+        <span className='absolute -top-1 -right-1 bg-red-500 text-white rounded-full size-4 flex justify-center items-center text-xs'>
           {count}
         </span>
       )}

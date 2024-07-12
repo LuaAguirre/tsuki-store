@@ -24,7 +24,7 @@ export function Filters({ filters, setFilters }) {
         <SelectCategory handleChangeCategory={handleChangeCategory} />
       </div>
 
-      <div className='flex justify-center items-center gap-2 w-full md:w-auto'>
+      <div className='flex justify-center items-center gap-2 w-full md:w-auto p-2'>
         <label
           htmlFor={minPriceFilterId}
           className='text-sm whitespace-nowrap'>
@@ -38,6 +38,7 @@ export function Filters({ filters, setFilters }) {
           id={minPriceFilterId}
           value={filters.minPrice}
           onChange={handleChangeMinPrice}
+          className='w-full max-w-36 flex-1'
         />
         <span>${filters.minPrice}</span>
       </div>
