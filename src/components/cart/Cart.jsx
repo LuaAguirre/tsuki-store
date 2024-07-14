@@ -53,7 +53,7 @@ export default function Cart() {
                 <img
                   src={item.product.images}
                   alt={item.product.title}
-                  className='w-full rounded block object-cover'
+                  className='w-full rounded-md block object-cover'
                 />
 
                 <div className='grid grid-rows-3 w-full h-28 mt-2 p-2 pl-0 gap-4'>

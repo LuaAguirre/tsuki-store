@@ -25,7 +25,7 @@ export function Products() {
             <img
               src={product.images}
               alt={`imagen de ${product.title}`}
-              className='rounded w-full block object-cover'
+              className='rounded-md w-full block object-cover'
             />
             <div className='grid grid-rows-3 w-full h-32'>
               <div className='flex items-center'>
