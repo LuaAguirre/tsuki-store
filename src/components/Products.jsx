@@ -1,12 +1,18 @@
 import '../styles/Products.css'
 import { useCartStore } from '../stores/useCartStore'
 import { ToastAddCart } from './buttons/ToastAddCart'
+import { useFilterStore } from '@/stores/useFilterStore'
 
-export function Products({ filteredProducts }) {
+export function Products() {
   const setCart = useCartStore((state) => state.setCart)
+  const filteredProducts = useFilterStore((state) => state.filteredProducts(''))
 
   const handleAddToCart = (product) => {
     setCart(product)
+  }
+
+  if (!filteredProducts.length) {
+    return <div className='flex justify-center'>No products found</div>
   }
 
   return (
