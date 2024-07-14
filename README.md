@@ -5,5 +5,6 @@ Tasks:
 - i18n
 - Edit Footer
 - Pagination
-- Add pay
+- Pay
 - Nav buttons after the create real products
+- Dark Mode

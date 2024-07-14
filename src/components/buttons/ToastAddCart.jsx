@@ -1,5 +1,5 @@
 'use client'
-import { IconAddCart } from '../icons/IconAddCart'
+
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/components/ui/use-toast'
 
@@ -15,10 +15,9 @@ export function ToastAddCart({ product, handleAddToCart }) {
 
   return (
     <Button
-      className='hover:scale-110'
       variant='outline'
       onClick={handleClick}>
-      <IconAddCart />
+      Add to cart
     </Button>
   )
 }

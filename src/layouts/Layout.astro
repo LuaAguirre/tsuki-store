@@ -36,7 +36,7 @@ const { title, description } = Astro.props
   </head>
 
   <body>
-    <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12'>
+    <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12 bg-[#f1f3f4]'>
       <Header />
       <slot />
       <PaginationProducts />
@@ -50,7 +50,6 @@ const { title, description } = Astro.props
       }
       html {
         font-family: system-ui, sans-serif;
-        background: #f1f3f4;
         background-size: 224px;
       }
       code {

@@ -17,28 +17,31 @@ export function Products() {
 
   return (
     <div className='w-full flex justify-center items-center'>
-      <ul className='grid gap-4 w-full'>
+      <ul className='grid gap-8 w-full'>
         {filteredProducts?.slice(0, 16).map((product) => (
           <li
             key={product.id}
-            className='flex flex-col gap-4 rounded border p-4'>
+            className='flex flex-col gap-4 rounded-md p-4 bg-[#F6F6F6]'>
             <img
               src={product.images}
               alt={`imagen de ${product.title}`}
               className='rounded w-full block object-cover'
             />
-            <div className='flex justify-center items-center gap-2  '>
-              <strong className='text-center font-semibold text-md'>
-                {product.title}
-              </strong>
-              - ${product.price}
-            </div>
+            <div className='grid grid-rows-3 w-full h-32'>
+              <div className='flex items-center'>
+                <strong className='font-semibold'>{product.title}</strong>
+              </div>
 
-            <div className='flex justify-center'>
-              <ToastAddCart
-                product={product}
-                handleAddToCart={handleAddToCart}
-              />
+              <div className='flex items-center opacity-70'>
+                ${product.price}
+              </div>
+
+              <div className='flex items-center justify-end mt-2'>
+                <ToastAddCart
+                  product={product}
+                  handleAddToCart={handleAddToCart}
+                />
+              </div>
             </div>
           </li>
         ))}
