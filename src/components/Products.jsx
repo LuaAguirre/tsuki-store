@@ -27,7 +27,7 @@ export function Products() {
               alt={`imagen de ${product.title}`}
               className='rounded-md w-full block object-cover'
             />
-            <div className='grid grid-rows-3 w-full h-32'>
+            <div className='grid grid-rows-3 w-full h-28'>
               <div className='flex items-center'>
                 <strong>{product.title}</strong>
               </div>

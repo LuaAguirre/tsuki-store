@@ -2,7 +2,11 @@
 import ImageAnime from '../ImageAnime.astro'
 ---
 
-<div class='flex flex-col justify-center items-center w-full h-36 gap-3'>
-  <h1 class='text-5xl font-bold'>tsuki.</h1>
-  <h5 class='text-lg opacity-50'>Let's go to the next level</h5>
+<div
+  class='flex relative justify-center items-center w-full h-80 overflow-hidden gap-3 rounded-xl'>
+  <ImageAnime />
+  <h1 class='text-5xl font-bold absolute text-white/75'>tsuki.</h1>
+  <h5 class='text-lg text-white opacity-70 absolute top-48'
+    >Let's go to the next level</h5
+  >
 </div>
