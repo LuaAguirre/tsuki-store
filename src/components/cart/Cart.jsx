@@ -32,7 +32,7 @@ export default function Cart() {
     <div>
       <Sheet>
         <SheetTrigger asChild>
-          <button className='cart-button flex items-center z-20 cursor-pointer hover:bg-gray-200 rounded-full p-2'>
+          <button className='cart-button flex items-center z-20 cursor-pointer hover:bg-gray-200 rounded-lg p-1'>
             <IconCart count={cartCount} />
           </button>
         </SheetTrigger>
@@ -49,7 +49,7 @@ export default function Cart() {
             {cart.map((item) => (
               <li
                 key={item.product.id}
-                className='flex flex-col gap-2 rounded-md border p-4'>
+                className='flex flex-col gap-2 rounded-lg border p-4'>
                 <img
                   src={item.product.images}
                   alt={item.product.title}
@@ -58,12 +58,12 @@ export default function Cart() {
 
                 <div className='grid grid-rows-3 w-full h-28 mt-2 p-2 pl-0 gap-4'>
                   <div className='flex items-center'>
-                    <strong className='font-semibold'>
-                      {item.product.title}
-                    </strong>
+                    <strong>{item.product.title}</strong>
                   </div>
 
-                  <div className='mt-1'>${item.product.price}</div>
+                  <div className='mt-1 text-sm opacity-80'>
+                    ${item.product.price}
+                  </div>
 
                   <footer className='flex justify-end items-center gap-2'>
                     <small>Qty: {item.quantity}</small>

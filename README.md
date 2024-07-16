@@ -1,6 +1,5 @@
 Tasks:
 
-- Fix visual bug in products, fix price position / change product position
 - Local Storage
 - i18n
 - Edit Footer

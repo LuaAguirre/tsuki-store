@@ -21,7 +21,7 @@ export function Products() {
         {filteredProducts?.slice(0, 16).map((product) => (
           <li
             key={product.id}
-            className='flex flex-col gap-4 rounded-md p-4 bg-[#F6F6F6]'>
+            className='flex flex-col gap-4 p-4 bg-[#F6F6F6] rounded-lg border'>
             <img
               src={product.images}
               alt={`imagen de ${product.title}`}
@@ -29,10 +29,10 @@ export function Products() {
             />
             <div className='grid grid-rows-3 w-full h-32'>
               <div className='flex items-center'>
-                <strong className='font-semibold'>{product.title}</strong>
+                <strong>{product.title}</strong>
               </div>
 
-              <div className='flex items-center opacity-70'>
+              <div className='flex items-center opacity-80 text-sm'>
                 ${product.price}
               </div>
 
