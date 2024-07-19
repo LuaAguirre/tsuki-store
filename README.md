@@ -1,5 +1,7 @@
 Tasks:
 
+- Images product performance
+- Resize products
 - Dark Mode
 - Local Storage
 - i18n

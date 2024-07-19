@@ -24,8 +24,8 @@ export function Products() {
             key={product.id}
             className='flex flex-col gap-4 p-4 bg-[#F6F6F6] rounded-lg border'>
             <img
-              src={product.images}
-              alt={`imagen de ${product.title}`}
+              src={product.images[1]}
+              alt={product.title}
               className='rounded-md w-full block object-cover'
             />
             <div className='grid grid-rows-3 w-full h-28'>
