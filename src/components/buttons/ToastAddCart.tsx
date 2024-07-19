@@ -1,9 +1,14 @@
-'use client'
-
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/components/ui/use-toast'
+import type { Product } from '@/types/product'
 
-export function ToastAddCart({ product, handleAddToCart }) {
+export function ToastAddCart({
+  product,
+  handleAddToCart
+}: {
+  product: Product
+  handleAddToCart: (product: Product) => void
+}) {
   const { toast } = useToast()
 
   const handleClick = () => {

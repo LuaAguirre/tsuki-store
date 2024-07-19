@@ -1,4 +1,4 @@
-import { useId } from 'react'
+import { useId, type ChangeEvent } from 'react'
 import { useFilterStore } from '../../stores/useFilterStore'
 import Search from './Search'
 import { SelectCategory } from './SelectCategory'
@@ -9,10 +9,10 @@ export function Filters() {
   const setMinPrice = useFilterStore((state) => state.setMinPrice)
   const setCategory = useFilterStore((state) => state.setCategory)
 
-  const handleChangeCategory = (category) => {
+  const handleChangeCategory = (category: string) => {
     setCategory(category)
   }
-  const handleChangeMinPrice = (event) => {
+  const handleChangeMinPrice = (event: ChangeEvent<HTMLInputElement>) => {
     setMinPrice(event.target.value)
   }
 

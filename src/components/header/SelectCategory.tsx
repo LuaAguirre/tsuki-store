@@ -8,7 +8,11 @@ import {
   SelectValue
 } from '@/components/ui/select'
 
-export function SelectCategory({ handleChangeCategory }) {
+interface ChangeCategory {
+  handleChangeCategory: (category: string) => void
+}
+
+export function SelectCategory({ handleChangeCategory }: ChangeCategory) {
   return (
     <Select onValueChange={handleChangeCategory}>
       <SelectTrigger className='w-[180px]'>

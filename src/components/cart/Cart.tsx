@@ -11,6 +11,8 @@ import {
   SheetFooter
 } from '@/components/ui/sheet'
 import { Button } from '../ui/button'
+import type { Product } from '@/types/product'
+import type { CartItem } from '@/types/cart'
 
 export default function Cart() {
   const cart = useCartStore((state) => state.cart)
@@ -19,14 +21,17 @@ export default function Cart() {
   const removeCart = useCartStore((state) => state.removeCart)
   const totalAmount = useCartStore((state) => state.totalAmount)
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (product: Product) => {
     setCart(product)
   }
-  const handleRemoveToCart = (product) => {
+  const handleRemoveToCart = (product: Product) => {
     removeCart(product)
   }
 
-  const cartCount = cart.reduce((total, item) => total + item.quantity, 0)
+  const cartCount = cart.reduce(
+    (total: number, item: CartItem) => total + item.quantity,
+    0
+  )
 
   return (
     <div>
@@ -44,9 +49,8 @@ export default function Cart() {
               Make changes to your cart here. Click buy when you're done.
             </SheetDescription>
           </SheetHeader>
-
           <ul className='flex flex-col justify-center gap-4'>
-            {cart.map((item) => (
+            {cart.map((item: CartItem) => (
               <li
                 key={item.product.id}
                 className='flex flex-col gap-2 rounded-lg border p-4'>
@@ -86,6 +90,7 @@ export default function Cart() {
             ))}
           </ul>
 
+          {/* Split Cart */}
           <SheetFooter>
             <div className=' w-96 flex justify-between items-center'>
               <h2>Total: ${totalAmount.toFixed(2)}</h2>

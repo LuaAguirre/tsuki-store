@@ -2,12 +2,13 @@ import '../styles/Products.css'
 import { useCartStore } from '../stores/useCartStore'
 import { ToastAddCart } from './buttons/ToastAddCart'
 import { useFilterStore } from '@/stores/useFilterStore'
+import { type Product } from '@/types/product'
 
 export function Products() {
   const setCart = useCartStore((state) => state.setCart)
   const filteredProducts = useFilterStore((state) => state.filteredProducts(''))
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (product: Product) => {
     setCart(product)
   }
 
@@ -18,7 +19,7 @@ export function Products() {
   return (
     <div className='w-full flex justify-center items-center'>
       <ul className='grid gap-8 w-full'>
-        {filteredProducts?.slice(0, 16).map((product) => (
+        {filteredProducts?.slice(0, 16).map((product: Product) => (
           <li
             key={product.id}
             className='flex flex-col gap-4 p-4 bg-[#F6F6F6] rounded-lg border'>

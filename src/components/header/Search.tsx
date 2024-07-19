@@ -1,17 +1,18 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useSearchStore } from '@/stores/useSearchStore'
+import type { ChangeEvent, FormEvent } from 'react'
 
 export default function Search() {
   const search = useSearchStore((state) => state.search)
   const setSearch = useSearchStore((state) => state.setSearch)
 
-  const handleChange = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value
-    setSearch(value) // Actualizar el término de búsqueda en el estado principal
+    setSearch(value)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
   }
 
