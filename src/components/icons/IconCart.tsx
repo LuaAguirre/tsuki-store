@@ -1,4 +1,4 @@
-export default function IconCart({ count }) {
+export default function IconCart({ count }: { count: number }) {
   return (
     <div className='relative'>
       <svg
