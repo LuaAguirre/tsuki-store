@@ -1,4 +1,3 @@
-import { Card, CardContent } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -18,7 +17,7 @@ export function ProductCarousel({ product }: { product: Product }) {
               <img
                 src={image}
                 alt={`Imagen ${index + 1} del producto`}
-                className=' rounded-md'
+                className='rounded-md'
               />
             </div>
           </CarouselItem>
