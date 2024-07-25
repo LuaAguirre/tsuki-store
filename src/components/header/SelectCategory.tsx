@@ -16,17 +16,17 @@ export function SelectCategory({ handleChangeCategory }: ChangeCategory) {
   return (
     <Select onValueChange={handleChangeCategory}>
       <SelectTrigger className='w-[180px]'>
-        <SelectValue placeholder='Select a category' />
+        <SelectValue placeholder='Selecciona un anime' />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Categories</SelectLabel>
-          <SelectItem value='all'>All</SelectItem>
-          <SelectItem value='Clothess'>Clothess</SelectItem>
-          <SelectItem value='Furniture'>Furniture</SelectItem>
-          <SelectItem value='Miscellaneous'>Miscellaneous</SelectItem>
-          <SelectItem value='Electronics'>Electronics</SelectItem>
-          <SelectItem value='Shoes'>Shoes</SelectItem>
+          <SelectLabel>Animes</SelectLabel>
+          <SelectItem value='all'>Todos</SelectItem>
+          <SelectItem value='Naruto'>Naruto</SelectItem>
+          <SelectItem value='One Piece'>One Piece</SelectItem>
+          <SelectItem value='Dragon Ball'>Dragon Ball</SelectItem>
+          <SelectItem value='Demon Slayer'>Demon Slayer</SelectItem>
+          <SelectItem value='Jujutsu Kaisen'>Jujutsu Kaisen</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

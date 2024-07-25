@@ -13,11 +13,12 @@ export function ProductCarousel({ product }: { product: Product }) {
       <CarouselContent>
         {product.images.map((image: string, index: number) => (
           <CarouselItem key={index}>
-            <div className='p-1'>
+            <div className='rounded-md p-1 h-80 overflow-hidden'>
+              {/*cut image and place size-full*/}
               <img
                 src={image}
                 alt={`Imagen ${index + 1} del producto`}
-                className='rounded-md'
+                className='rounded-md object-cover'
               />
             </div>
           </CarouselItem>
