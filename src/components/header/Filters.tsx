@@ -31,8 +31,8 @@ export function Filters() {
         <input
           type='range'
           min='0'
-          max='1000'
-          step={50}
+          max='200'
+          step={5}
           id={minPriceFilterId}
           value={minPrice}
           onChange={handleChangeMinPrice}

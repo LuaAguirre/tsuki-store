@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Luffy Gear 5",
       "price": 59,
-      "description": "Experience ultimate comfort with our red jogger sweatpants, perfect for both workout sessions and lounging around the house. Made with soft, durable fabric, these joggers feature a snug waistband, adjustable drawstring, and practical side pockets for functionality. Their tapered design and elastic cuffs offer a modern fit that keeps you looking stylish on the go.",
+      "description": "Polo oversize de Luffy, One Piece.",
       "images": [
         "./src/assets/productsImages/luffy-gear5-1.jpg",
         "./src/assets/productsImages/luffy-gear5-2.jpg",
@@ -15,59 +15,59 @@
       }
     },
     {
-      "id": 1,
-      "title": "Luffy Gear 5",
+      "id": 2,
+      "title": "Satoru Gojo",
       "price": 59,
-      "description": "Experience ultimate comfort with our red jogger sweatpants, perfect for both workout sessions and lounging around the house. Made with soft, durable fabric, these joggers feature a snug waistband, adjustable drawstring, and practical side pockets for functionality. Their tapered design and elastic cuffs offer a modern fit that keeps you looking stylish on the go.",
+      "description": "Polo oversize de Satoru Gojo, Jujutsu Kaisen.",
       "images": [
-        "./src/assets/productsImages/luffy-gear5-1.jpg",
-        "./src/assets/productsImages/luffy-gear5-2.jpg",
-        "./src/assets/productsImages/luffy-gear5-3.jpg"
+        "./src/assets/productsImages/Satoru Gojo/satoru-gojo-1.jpg",
+        "./src/assets/productsImages/Satoru Gojo/satoru-gojo-2.jpg",
+        "./src/assets/productsImages/Satoru Gojo/satoru-gojo-3.jpg"
       ],
       "category": {
-        "name": "One Piece"
+        "name": "Jujutsu Kaisen"
       }
     },
     {
-      "id": 1,
-      "title": "Luffy Gear 5",
+      "id": 3,
+      "title": "Gi de Goku",
       "price": 59,
-      "description": "Experience ultimate comfort with our red jogger sweatpants, perfect for both workout sessions and lounging around the house. Made with soft, durable fabric, these joggers feature a snug waistband, adjustable drawstring, and practical side pockets for functionality. Their tapered design and elastic cuffs offer a modern fit that keeps you looking stylish on the go.",
+      "description": "Polo overzise del traje de Kakaroto, Dragon Ball.",
       "images": [
-        "./src/assets/productsImages/luffy-gear5-1.jpg",
-        "./src/assets/productsImages/luffy-gear5-2.jpg",
-        "./src/assets/productsImages/luffy-gear5-3.jpg"
+        "./src/assets/productsImages/Gi's Goku/goku-gi-1.jpg",
+        "./src/assets/productsImages/Gi's Goku/goku-gi-2.jpg",
+        "./src/assets/productsImages/Gi's Goku/goku-gi-3.jpg"
       ],
       "category": {
-        "name": "One Piece"
+        "name": "Dragon Ball"
       }
     },
     {
-      "id": 1,
-      "title": "Luffy Gear 5",
+      "id": 4,
+      "title": "Naruto Uzumaki",
       "price": 59,
-      "description": "Experience ultimate comfort with our red jogger sweatpants, perfect for both workout sessions and lounging around the house. Made with soft, durable fabric, these joggers feature a snug waistband, adjustable drawstring, and practical side pockets for functionality. Their tapered design and elastic cuffs offer a modern fit that keeps you looking stylish on the go.",
+      "description": "Polo oversize de Naruto Uzumaki, Naruto Shippuden.",
       "images": [
-        "./src/assets/productsImages/luffy-gear5-1.jpg",
-        "./src/assets/productsImages/luffy-gear5-2.jpg",
-        "./src/assets/productsImages/luffy-gear5-3.jpg"
+        "./src/assets/productsImages/Naruto/naruto-1.jpg",
+        "./src/assets/productsImages/Naruto/naruto-2.jpg",
+        "./src/assets/productsImages/Naruto/naruto-3.jpg"
       ],
       "category": {
-        "name": "One Piece"
+        "name": "Naruto"
       }
     },
     {
-      "id": 1,
-      "title": "Luffy Gear 5",
-      "price": 59,
-      "description": "Experience ultimate comfort with our red jogger sweatpants, perfect for both workout sessions and lounging around the house. Made with soft, durable fabric, these joggers feature a snug waistband, adjustable drawstring, and practical side pockets for functionality. Their tapered design and elastic cuffs offer a modern fit that keeps you looking stylish on the go.",
+      "id": 5,
+      "title": "Urban Inosuke",
+      "price": 79,
+      "description": "Polo oversize de Inosuke Hashibira (respiración de la bestia), Demon Slayer: Kimetsu No Yaiba.",
       "images": [
-        "./src/assets/productsImages/luffy-gear5-1.jpg",
-        "./src/assets/productsImages/luffy-gear5-2.jpg",
-        "./src/assets/productsImages/luffy-gear5-3.jpg"
+        "./src/assets/productsImages/Inosuke/inosuke-1.jpg",
+        "./src/assets/productsImages/Inosuke/inosuke-2.jpg",
+        "./src/assets/productsImages/Inosuke/inosuke-3.jpg"
       ],
       "category": {
-        "name": "One Piece"
+        "name": "Demon Slayer"
       }
     }
   ]
