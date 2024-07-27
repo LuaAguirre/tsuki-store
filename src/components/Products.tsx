@@ -23,7 +23,7 @@ export function Products() {
         {filteredProducts?.slice(0, 16).map((product: Product) => (
           <li
             key={product.id}
-            className='flex flex-col gap-2 p-4 bg-[#F6F6F6] dark:bg-[#090909] rounded-lg group items-center'>
+            className='flex flex-col gap-2 p-4 bg-[#e9eaea] dark:bg-[#181726] border  rounded-lg group items-center'>
             <ProductCarousel product={product} />
 
             <div className='grid grid-rows-3 w-full h-28 p-1'>
