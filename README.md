@@ -1,6 +1,5 @@
 Tasks:
 
-- Dark Mode - Fix Icon Cart color, bg-dark and details
 - Set Loading with Skeletons
 - Handle Errors
 - Images product re-download after filters
