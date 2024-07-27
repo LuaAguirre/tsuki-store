@@ -17,7 +17,7 @@ export function ProductCarousel({ product }: { product: Product }) {
               <img
                 src={image}
                 alt={`Imagen ${index + 1} del producto`}
-                className='rounded-md object-cover'
+                className='rounded-md size-90 '
               />
             </div>
           </CarouselItem>
