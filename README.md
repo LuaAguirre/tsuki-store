@@ -1,7 +1,5 @@
 Tasks:
 
-- Fix url's products of Snipcart
-- Uninstall card shadcnui
 - Images product performance
 - Resize products
 - Dark Mode
@@ -14,4 +12,5 @@ Tasks:
 - Set Loading with Skeletons
 - Handle Errors
 - Debounce
+- Fix url's products of Snipcart
 - Colors according to the chosen anime
