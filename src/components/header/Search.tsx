@@ -22,11 +22,11 @@ export default function Search() {
         onSubmit={handleSubmit}
         className='flex gap-4 w-full max-w-sm'>
         <Input
-          placeholder='Furnitures, clothes, etc...'
+          placeholder='Dragon ball, Jujutsu Kaisen...'
           value={search}
           onChange={handleChange}
         />
-        <Button type='submit'>Search</Button>
+        <Button type='submit'>Buscar</Button>
       </form>
     </div>
   )

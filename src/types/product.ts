@@ -10,9 +10,9 @@ export interface Product {
 }
 
 export interface FilterStore {
-  minPrice: number
+  maxPrice: number
   category: string
-  setMinPrice: (minPrice: number) => void
+  setMaxPrice: (minPrice: number) => void
   setCategory: (category: string) => void
   filterProducts: (products: Product[]) => Product[]
   filteredProducts: () => Product[]

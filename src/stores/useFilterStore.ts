@@ -5,12 +5,12 @@ import { useSearchStore } from './useSearchStore'
 import type { Product, FilterStore } from '@/types/product'
 
 const useFilterStore = create<FilterStore>((set, get) => ({
-  minPrice: 0,
+  maxPrice: 200,
   category: 'all',
 
-  setMinPrice: (minPrice) =>
+  setMaxPrice: (maxPrice) =>
     set(() => ({
-      minPrice
+      maxPrice
     })),
 
   setCategory: (category) =>
@@ -19,10 +19,10 @@ const useFilterStore = create<FilterStore>((set, get) => ({
     })),
 
   filterProducts: (products) => {
-    const { minPrice, category } = get()
+    const { maxPrice, category } = get()
     return products?.filter((product) => {
       return (
-        product.price >= minPrice &&
+        product.price <= maxPrice &&
         (category === 'all' || category === product.category?.name)
       )
     })

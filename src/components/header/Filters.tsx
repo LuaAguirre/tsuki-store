@@ -4,16 +4,16 @@ import Search from './Search'
 import { SelectCategory } from './SelectCategory'
 
 export function Filters() {
-  const minPriceFilterId = useId()
-  const minPrice = useFilterStore((state) => state.minPrice)
-  const setMinPrice = useFilterStore((state) => state.setMinPrice)
+  const maxPriceFilterId = useId()
+  const maxPrice = useFilterStore((state) => state.maxPrice)
+  const setMaxPrice = useFilterStore((state) => state.setMaxPrice)
   const setCategory = useFilterStore((state) => state.setCategory)
 
   const handleChangeCategory = (category: string) => {
     setCategory(category)
   }
   const handleChangeMinPrice = (event: ChangeEvent<HTMLInputElement>) => {
-    setMinPrice(event.target.value)
+    setMaxPrice(Number(event.target.value))
   }
 
   return (
@@ -24,21 +24,21 @@ export function Filters() {
 
       <div className='flex justify-center items-center gap-2 w-full p-2 '>
         <label
-          htmlFor={minPriceFilterId}
+          htmlFor={maxPriceFilterId}
           className='text-sm whitespace-nowrap'>
-          Min. Price:
+          Máximo:
         </label>
         <input
           type='range'
-          min='0'
+          min='10'
           max='200'
           step={5}
-          id={minPriceFilterId}
-          value={minPrice}
+          id={maxPriceFilterId}
+          value={maxPrice}
           onChange={handleChangeMinPrice}
           className='w-full max-w-28 flex-1'
         />
-        <span>${minPrice}</span>
+        <span>S/.{maxPrice}</span>
       </div>
 
       <div className='w-full col-span-2 flex justify-center'>
