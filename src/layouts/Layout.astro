@@ -35,8 +35,9 @@ const { title, description } = Astro.props
     <ViewTransitions />
   </head>
 
-  <body>
-    <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12 bg-[#f1f3f4]'>
+  <body class='bg-[#f1f3f4] dark:bg-[#161616]'>
+    {/*or bg-gray-900*/}
+    <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12'>
       <Header />
       <button class='snipcart-checkout'>Click here to checkout</button>
       <slot />
@@ -48,12 +49,13 @@ const { title, description } = Astro.props
 
     <style is:global>
       :root {
-        color-scheme: light;
+        color-scheme: light dark;
       }
       html {
         font-family: system-ui, sans-serif;
         background-size: 224px;
       }
+
       code {
         font-family:
           Menlo,

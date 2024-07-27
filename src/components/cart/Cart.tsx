@@ -1,4 +1,4 @@
-import IconCart from '../icons/IconCart'
+import IconCart from './IconCart'
 import { useCartStore } from '../../stores/useCartStore'
 import {
   Sheet,
@@ -37,7 +37,7 @@ export default function Cart() {
     <div>
       <Sheet>
         <SheetTrigger asChild>
-          <button className='cart-button flex items-center z-20 cursor-pointer hover:bg-gray-200 rounded-lg p-1'>
+          <button className='cart-button flex items-center z-20 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg p-1'>
             <IconCart count={cartCount} />
           </button>
         </SheetTrigger>
