@@ -1,12 +1,11 @@
 Tasks:
 
-- Set Loading with Skeletons
-- Handle Errors
-- Images product re-download after filters
 - Debounce
 - Pagination or Infinite scroll
 - Edit Footer / responsive
 - Navbar funcionality
+- Handle Errors
+- Images product re-download after filters
 - i18n
 - Fix url's products of Snipcart
 - Local Storage (check with snipcart)
