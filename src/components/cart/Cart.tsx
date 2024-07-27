@@ -55,7 +55,7 @@ export default function Cart() {
                 key={item.product.id}
                 className='flex flex-col gap-2 rounded-lg border p-4'>
                 <img
-                  src={item.product.images}
+                  src={item.product.images[0]}
                   alt={item.product.title}
                   className='w-full rounded-md block object-cover'
                 />

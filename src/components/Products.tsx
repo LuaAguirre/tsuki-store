@@ -1,7 +1,7 @@
 import '../styles/Products.css'
 import { useCartStore } from '../stores/useCartStore'
 import { useFilterStore } from '@/stores/useFilterStore'
-import { ToastAddCart } from './buttons/ToastAddCart'
+import { ToastAddCart } from './products/ToastAddCart'
 import { ProductCarousel } from './products/ProductCarousel'
 import { type Product } from '@/types/product'
 
@@ -32,7 +32,7 @@ export function Products() {
               </div>
 
               <div className='flex items-center opacity-80 text-sm'>
-                ${product.price}
+                S/.{product.price}
               </div>
 
               <div className='flex items-center justify-end'>
@@ -40,17 +40,6 @@ export function Products() {
                   product={product}
                   handleAddToCart={handleAddToCart}
                 />
-                <button
-                  className='snipcart-add-item'
-                  data-item-id={product.id}
-                  data-item-price={product.price}
-                  data-item-description={product.description}
-                  data-item-image={product.images[0]}
-                  data-item-name={product.title}
-                  data-item-custom1-name='Frame color'
-                  data-item-custom1-options='Black|Brown|Gold'>
-                  Add to cart
-                </button>
               </div>
             </div>
           </li>
