@@ -1,16 +1,14 @@
 Tasks:
 
-- Images product performance
-- Resize products
 - Dark Mode
-- Local Storage
-- i18n
-- Edit Footer / responsive
-- Pagination
-- Pay
-- Navbar
 - Set Loading with Skeletons
 - Handle Errors
+- Images product re-download after filters
 - Debounce
+- Pagination or Infinite scroll
+- Edit Footer / responsive
+- Navbar funcionality
+- i18n
 - Fix url's products of Snipcart
+- Local Storage (check with snipcart)
 - Colors according to the chosen anime
