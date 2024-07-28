@@ -11,6 +11,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props
+
 ---
 
 <!doctype html>
@@ -36,7 +37,7 @@ const { title, description } = Astro.props
   </head>
 
   <body  >
-    {/*bg-[#f1f3f4] or bg-gray-900*/}
+    
     <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12'>
       <Header />
       <button class='snipcart-checkout hidden'>Click here to checkout</button>
@@ -70,11 +71,12 @@ const { title, description } = Astro.props
     </style>
 
     <script>
+      const PUBLIC_SNIPCART = import.meta.env.PUBLIC_SNIPCART_API_KEY
+      
       window.SnipcartSettings = {
-        publicApiKey: 'PUBLIC_SNIPCART_API_KEY',
+        publicApiKey: PUBLIC_SNIPCART,
         loadStrategy: 'on-user-interaction',
         addProductBehavior: 'none',
-        version: '3.7.1',
         modalStyle: 'side'
       }
       ;(function () {
