@@ -1,12 +1,10 @@
 Tasks:
 
-- Navbar funcionality
+- Create icon for head
 - Debounce
-- Pagination or Infinite scroll
+- Pagination or Infinite scroll when add more products
 - Edit Footer
 - Handle Errors
-- Images product re-download after filters
-- i18n
 - Fix url's products of Snipcart
-- Local Storage (check with snipcart)
-- Colors according to the chosen anime
+- i18n
+- Header with top products or image

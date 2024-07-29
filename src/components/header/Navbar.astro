@@ -1,7 +1,6 @@
 ---
-import Cart from '@/components/cart/Cart'
+import LabelFilter from '@/components/header/LabelFilter'
 import { ModeToggle } from '../ui/ModeToggle'
-import IconCart from '../cart/IconCart'
 ---
 
 <nav class='relative flex items-center h-12 px-6 md:px-4 lg:px-8 border-b-2'>
@@ -9,29 +8,9 @@ import IconCart from '../cart/IconCart'
     <ModeToggle client:load />
   </div>
 
-  <div
-    class='absolute left-1/2 transform -translate-x-1/2 flex gap-1 md:gap-2 lg:gap-4'>
-    <div
-      class='flex items-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg px-4 py-1'>
-      <a href='#news'>Nuevos</a>
-    </div>
-
-    <div
-      class='flex items-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg px-4 py-1'>
-      <a href='#discounts'>Ofertas</a>
-    </div>
-
-    <div
-      class='flex items-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg px-4 py-1'>
-      <a
-        href='#top-sells'
-        class='text-nowrap'
-        >Populares</a
-      >
-    </div>
-  </div>
+  <LabelFilter client:load />
 
   <div class='ml-auto'>
-    <button class='snipcart-checkout'> Carrito </button>
+    <button class='snipcart-checkout'>Cart</button>
   </div>
 </nav>

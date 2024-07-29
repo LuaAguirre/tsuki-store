@@ -17,8 +17,8 @@ export function Products() {
 
   if (loading) {
     return (
-      <div className='w-full flex justify-center items-center'>
-        <ul className='grid gap-8 w-full '>
+      <div className='flex w-full items-center justify-center'>
+        <ul className='grid w-full gap-8'>
           {[...Array(8)].map((_, index) => (
             <SkeletonCard key={index} />
           ))}
@@ -28,12 +28,14 @@ export function Products() {
   }
 
   if (!filteredProducts.length) {
-    return <div className='flex justify-center'>No products found</div>
+    return (
+      <div className='flex justify-center'>No se encontraron resultados</div>
+    )
   }
 
   return (
-    <div className='w-full flex justify-center items-center'>
-      <ul className='grid gap-8 w-full '>
+    <div className='flex w-full items-center justify-center'>
+      <ul className='grid w-full gap-8'>
         {filteredProducts?.slice(0, 16).map((product: Product) => (
           <ProductsItems
             key={product.id}

@@ -1,11 +1,14 @@
 ---
 import ImageAnime from '@/components/header/ImageAnime.astro'
+import Home from '@/components/header/Home'
 ---
 
 <div
   class='flex relative justify-center items-center w-full h-80 overflow-hidden gap-3 rounded-xl'>
   <ImageAnime />
-  <h1 class='text-5xl font-bold absolute text-white/75'>tsuki.</h1>
+  <div class='absolute'>
+    <Home client:load />
+  </div>
   <h5 class='text-lg text-white opacity-70 absolute top-48'
     >Let's go to the next level</h5
   >

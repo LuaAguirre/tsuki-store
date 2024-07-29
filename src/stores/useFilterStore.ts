@@ -7,6 +7,7 @@ import type { Product, FilterStore } from '@/types/product'
 const useFilterStore = create<FilterStore>((set, get) => ({
   maxPrice: 200,
   category: 'all',
+  label: 'all',
 
   setMaxPrice: (maxPrice) =>
     set(() => ({
@@ -18,13 +19,26 @@ const useFilterStore = create<FilterStore>((set, get) => ({
       category
     })),
 
+  setLabel: (label) =>
+    set(() => ({
+      label
+    })),
+
+  resetFilters: () =>
+    set(() => ({
+      maxPrice: 200,
+      category: 'all',
+      label: 'all'
+    })),
+
   filterProducts: (products) => {
-    const { maxPrice, category } = get()
+    const { maxPrice, category, label } = get()
     return products?.filter((product) => {
-      return (
-        product.price <= maxPrice &&
-        (category === 'all' || category === product.category)
-      )
+      const matchesPrice = product.price <= maxPrice
+      const matchesCategory =
+        category === 'all' || category === product.category
+      const matchesLabel = label === 'all' || product.label === label
+      return matchesPrice && matchesCategory && matchesLabel
     })
   },
 
