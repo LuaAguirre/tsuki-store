@@ -36,7 +36,7 @@ const { title, description } = Astro.props
     <ViewTransitions />
   </head>
 
-  <body  >
+  <body>
     
     <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12'>
       <Header />
@@ -95,9 +95,9 @@ const { title, description } = Astro.props
         var m, g
         ;(g = (m = window.SnipcartSettings).loadCSS) != null || (m.loadCSS = !0)
         var y =
-            window.SnipcartSettings.version.includes('v3.0.0-ci') ||
+            window.SnipcartSettings.version?.includes('v3.0.0-ci') ||
             (window.SnipcartSettings.version != '3.0' &&
-              window.SnipcartSettings.version.localeCompare('3.4.0', void 0, {
+              window.SnipcartSettings.version?.localeCompare('3.4.0', void 0, {
                 numeric: !0,
                 sensitivity: 'base'
               }) === -1),
@@ -145,6 +145,7 @@ const { title, description } = Astro.props
             h(n),
             i ||
               ((i = document.createElement('script')),
+              /* @ts-ignore */
               (i.src = ''
                 .concat(window.SnipcartSettings.protocol, '://')
                 .concat(window.SnipcartSettings.domain, '/themes/v')
@@ -152,13 +153,17 @@ const { title, description } = Astro.props
                   window.SnipcartSettings.version,
                   '/default/snipcart.js'
                 )),
+                /* @ts-ignore */
               (i.async = !0),
               t.appendChild(i)),
             !e &&
               window.SnipcartSettings.loadCSS &&
               ((e = document.createElement('link')),
+              /* @ts-ignore */
               (e.rel = 'stylesheet'),
+              /* @ts-ignore */
               (e.type = 'text/css'),
+              /* @ts-ignore */
               (e.href = ''
                 .concat(window.SnipcartSettings.protocol, '://')
                 .concat(window.SnipcartSettings.domain, '/themes/v')
@@ -171,7 +176,7 @@ const { title, description } = Astro.props
               return document.removeEventListener(v, o)
             })
         }
-        function h(t) {
+        function h(t: any) {
           !y ||
             ((t.dataset.apiKey = window.SnipcartSettings.publicApiKey),
             window.SnipcartSettings.addProductBehavior &&

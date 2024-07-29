@@ -19,7 +19,7 @@ export function Products() {
     return (
       <div className='w-full flex justify-center items-center'>
         <ul className='grid gap-8 w-full '>
-          {[...Array(4)].map((_, index) => (
+          {[...Array(8)].map((_, index) => (
             <SkeletonCard key={index} />
           ))}
         </ul>

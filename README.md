@@ -1,9 +1,9 @@
 Tasks:
 
+- Navbar funcionality
 - Debounce
 - Pagination or Infinite scroll
-- Edit Footer / responsive
-- Navbar funcionality
+- Edit Footer
 - Handle Errors
 - Images product re-download after filters
 - i18n

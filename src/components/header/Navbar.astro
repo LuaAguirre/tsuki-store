@@ -1,6 +1,7 @@
 ---
 import Cart from '@/components/cart/Cart'
 import { ModeToggle } from '../ui/ModeToggle'
+import IconCart from '../cart/IconCart'
 ---
 
 <nav class='relative flex items-center h-12 px-6 md:px-4 lg:px-8 border-b-2'>
@@ -31,6 +32,6 @@ import { ModeToggle } from '../ui/ModeToggle'
   </div>
 
   <div class='ml-auto'>
-    <Cart client:load />
+    <button class='snipcart-checkout'> Carrito </button>
   </div>
 </nav>
