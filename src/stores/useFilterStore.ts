@@ -23,7 +23,7 @@ const useFilterStore = create<FilterStore>((set, get) => ({
     return products?.filter((product) => {
       return (
         product.price <= maxPrice &&
-        (category === 'all' || category === product.category?.name)
+        (category === 'all' || category === product.category)
       )
     })
   },

@@ -10,9 +10,7 @@
         "../../productsImages/luffy/luffy-gear5-2.jpg",
         "../../productsImages/luffy/luffy-gear5-3.jpg"
       ],
-      "category": {
-        "name": "One Piece"
-      }
+      "category": "One Piece"
     },
     {
       "id": 2,
@@ -24,9 +22,7 @@
         "../../productsImages/satoru/satoru-gojo-2.jpg",
         "../../productsImages/satoru/satoru-gojo-3.jpg"
       ],
-      "category": {
-        "name": "Jujutsu Kaisen"
-      }
+      "category": "Jujutsu Kaisen"
     },
     {
       "id": 3,
@@ -38,9 +34,7 @@
         "../../productsImages/goku/goku-gi-2.jpg",
         "../../productsImages/goku/goku-gi-3.jpg"
       ],
-      "category": {
-        "name": "Dragon Ball"
-      }
+      "category": "Dragon Ball"
     },
     {
       "id": 4,
@@ -52,9 +46,7 @@
         "../../productsImages/naruto/naruto-2.jpg",
         "../../productsImages/naruto/naruto-3.jpg"
       ],
-      "category": {
-        "name": "Naruto"
-      }
+      "category": "Naruto"
     },
     {
       "id": 5,
@@ -66,9 +58,7 @@
         "../../productsImages/inosuke/inosuke-2.jpg",
         "../../productsImages/inosuke/inosuke-3.jpg"
       ],
-      "category": {
-        "name": "Demon Slayer"
-      }
+      "category": "Demon Slayer"
     }
   ]
 }
