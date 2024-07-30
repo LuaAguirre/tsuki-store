@@ -1,7 +1,7 @@
 import { useId, type ChangeEvent } from 'react'
 import { useFilterStore } from '../../stores/useFilterStore'
-import Search from './Search'
-import { SelectCategory } from './SelectCategory'
+import Search from './filters/Search'
+import { SelectCategory } from './filters/SelectCategory'
 
 export function Filters() {
   const maxPriceFilterId = useId()
