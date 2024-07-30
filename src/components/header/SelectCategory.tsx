@@ -7,14 +7,20 @@ import {
   SelectTrigger,
   SelectValue
 } from '@/components/ui/select'
+import { useFilterStore } from '@/stores/useFilterStore'
 
-interface ChangeCategory {
-  handleChangeCategory: (category: string) => void
-}
+export function SelectCategory() {
+  const category = useFilterStore((state) => state.category)
+  const setCategory = useFilterStore((state) => state.setCategory)
 
-export function SelectCategory({ handleChangeCategory }: ChangeCategory) {
+  const handleChangeCategory = (value: string) => {
+    setCategory(value)
+  }
+
   return (
-    <Select onValueChange={handleChangeCategory}>
+    <Select
+      value={category}
+      onValueChange={handleChangeCategory}>
       <SelectTrigger className='w-[180px]'>
         <SelectValue placeholder='Selecciona un anime' />
       </SelectTrigger>

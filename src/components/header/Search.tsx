@@ -22,7 +22,7 @@ export default function Search() {
         onSubmit={handleSubmit}
         className='flex gap-4 w-full max-w-sm'>
         <Input
-          placeholder='Dragon ball, Jujutsu Kaisen...'
+          placeholder='Dragon Ball, Jujutsu Kaisen...'
           value={search}
           onChange={handleChange}
         />

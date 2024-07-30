@@ -9,27 +9,15 @@ const useFilterStore = create<FilterStore>((set, get) => ({
   category: 'all',
   label: 'all',
 
-  setMaxPrice: (maxPrice) =>
-    set(() => ({
-      maxPrice
-    })),
+  setMaxPrice: (maxPrice) => set({ maxPrice }),
+  setCategory: (category) => set({ category }),
+  setLabel: (label) => set({ label }),
 
-  setCategory: (category) =>
-    set(() => ({
-      category
-    })),
-
-  setLabel: (label) =>
-    set(() => ({
-      label
-    })),
-
-  resetFilters: () =>
-    set(() => ({
-      maxPrice: 200,
-      category: 'all',
-      label: 'all'
-    })),
+  resetFilters: () => {
+    const resetSearch = useSearchStore.getState().resetSearch
+    resetSearch() // Restablecer búsqueda
+    set({ maxPrice: 200, category: 'all', label: 'all' })
+  },
 
   filterProducts: (products) => {
     const { maxPrice, category, label } = get()

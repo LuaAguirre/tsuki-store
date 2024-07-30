@@ -3,11 +3,11 @@ import { create } from 'zustand'
 interface SearchStore {
   search: string
   setSearch: (search: string) => void
+  resetSearch: () => void
 }
 
-const useSearchStore = create<SearchStore>((set) => ({
+export const useSearchStore = create<SearchStore>((set) => ({
   search: '',
-  setSearch: (search) => set({ search })
+  setSearch: (search) => set({ search }),
+  resetSearch: () => set({ search: '' })
 }))
-
-export { useSearchStore }
