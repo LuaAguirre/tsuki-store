@@ -8,7 +8,7 @@ const LabelFilter: React.FC = () => {
   }
 
   return (
-    <div className='absolute left-1/2 transform -translate-x-1/2 flex gap-1 md:gap-2 lg:gap-4'>
+    <div className='flex gap-1 md:gap-2 lg:gap-4'>
       <button
         className='flex items-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg px-4 py-1'
         onClick={() => handleLabelChange('New')}

@@ -7,11 +7,7 @@ export function Filters() {
   const maxPriceFilterId = useId()
   const maxPrice = useFilterStore((state) => state.maxPrice)
   const setMaxPrice = useFilterStore((state) => state.setMaxPrice)
-  const setCategory = useFilterStore((state) => state.setCategory)
 
-  const handleChangeCategory = (category: string) => {
-    setCategory(category)
-  }
   const handleChangeMinPrice = (event: ChangeEvent<HTMLInputElement>) => {
     setMaxPrice(Number(event.target.value))
   }
@@ -19,7 +15,7 @@ export function Filters() {
   return (
     <section className='grid grid-cols-2 md:flex-row md:flex justify-evenly items-center md:items-stretch gap-4 gap-y-6'>
       <div className='w-full flex justify-center'>
-        <SelectCategory handleChangeCategory={handleChangeCategory} />
+        <SelectCategory />
       </div>
 
       <div className='flex justify-center items-center gap-2 w-full p-2 '>

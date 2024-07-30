@@ -3,14 +3,14 @@ import LabelFilter from '@/components/header/LabelFilter'
 import { ModeToggle } from '../ui/ModeToggle'
 ---
 
-<nav class='relative flex items-center h-12 px-6 md:px-4 lg:px-8 border-b-2'>
+<nav class='flex items-center h-12 md:px-4 lg:px-8 border-b-2 justify-between'>
   <div>
     <ModeToggle client:load />
   </div>
 
   <LabelFilter client:load />
 
-  <div class='ml-auto'>
+  <div>
     <button class='snipcart-checkout'>Cart</button>
   </div>
 </nav>

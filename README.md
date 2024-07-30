@@ -1,6 +1,5 @@
 Tasks:
 
-- Resize navbar and minimize image wallpaper
 - Edit Footer
 - Create icon for head
 - Debounce
