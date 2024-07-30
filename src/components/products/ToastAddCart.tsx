@@ -28,8 +28,7 @@ export function ToastAddCart({
       data-item-price={product.price}
       data-item-description={product.description}
       data-item-image={product.images[0]}
-      data-item-name={product.title}
-      data-item-url='/'>
+      data-item-name={product.title}>
       Agregar al carrito
     </Button>
   )
