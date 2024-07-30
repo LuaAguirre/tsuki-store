@@ -29,7 +29,7 @@ export function ToastAddCart({
       data-item-description={product.description}
       data-item-image={product.images[0]}
       data-item-name={product.title}
-      data-item-url='/src/mocks/snipcartProducts.json'>
+      data-item-url='/'>
       Agregar al carrito
     </Button>
   )
