@@ -1,5 +1,6 @@
 Tasks:
 
+- Mobile fix onMouse, size navbar and minimize image wallpaper
 - Edit Footer
 - Create icon for head
 - Debounce
