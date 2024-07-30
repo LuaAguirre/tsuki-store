@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import '@/styles/globals.css'
-import { Products } from '@/components/Products'
-import { Filters } from '@/components/header/Filters'
 ---
 
 <script is:inline>
@@ -32,10 +30,64 @@ import { Filters } from '@/components/header/Filters'
 <Layout
   title='Bienvenido a tsuki.'
   description='Descubre ropa urbana única y moderna inspirada en tu anime favorito. En tsuki encontrarás camisetas, sudaderas, gorras y más, con diseños originales y de alta calidad. ¡Envío gratuito a todo el mundo!'>
-  <main class='flex flex-col gap-11 py-1'>
-    <Filters client:load />
-    <Products client:load />
-  </main>
+  <section class='p-6 md:p-10 max-w-3xl mx-auto'>
+    <h1 class='text-3xl font-bold mb-6'>Términos y Condiciones</h1>
+    <article class='text-gray-700 dark:text-gray-300'>
+      <p>
+        <strong>Bienvenido a Tsuki.</strong> Estos términos y condiciones describen
+        las reglas y regulaciones para el uso de nuestro sitio web.
+      </p>
+
+      <h2 class='text-2xl font-semibold mt-6 mb-4'>1. Introducción</h2>
+      <p>
+        Al acceder a este sitio web asumimos que aceptas estos términos y
+        condiciones en su totalidad. No continúes usando el sitio web de Tsuki
+        si no aceptas todos los términos y condiciones establecidos en esta
+        página.
+      </p>
+
+      <h2 class='text-2xl font-semibold mt-6 mb-4'>2. Cookies</h2>
+      <p>
+        Empleamos el uso de cookies. Al usar el sitio web de Tsuki, aceptas el
+        uso de cookies de acuerdo con la política de privacidad de Tsuki.
+      </p>
+
+      <h2 class='text-2xl font-semibold mt-6 mb-4'>3. Licencia</h2>
+      <p>
+        A menos que se indique lo contrario, Tsuki y/o sus licenciantes poseen
+        los derechos de propiedad intelectual de todo el material en Tsuki.
+        Todos los derechos de propiedad intelectual están reservados.
+      </p>
+
+      <h2 class='text-2xl font-semibold mt-6 mb-4'>4. Uso Aceptable</h2>
+      <p>
+        No debes usar este sitio web de manera que cause, o pueda causar, daño
+        al sitio web o menoscabo de la disponibilidad o accesibilidad del sitio
+        web; o de cualquier manera que sea ilegal, fraudulenta o dañina.
+      </p>
+
+      <h2 class='text-2xl font-semibold mt-6 mb-4'>5. Enlaces a Otros Sitios</h2
+      >
+      <p>
+        Nuestro servicio puede contener enlaces a sitios web o servicios de
+        terceros que no son propiedad ni están controlados por Tsuki.
+      </p>
+
+      <h2 class='text-2xl font-semibold mt-6 mb-4'>6. Cambios</h2>
+      <p>
+        Tsuki se reserva el derecho de revisar estos términos y condiciones en
+        cualquier momento. Si hacemos cambios sustanciales a estos términos, se
+        te notificará a través de nuestro sitio web.
+      </p>
+
+      <p class='mt-6'>
+        Si tienes alguna pregunta o inquietud sobre estos términos y
+        condiciones, por favor contáctanos en <strong
+          >tsuki.store26@gmail.com</strong
+        >.
+      </p>
+    </article>
+  </section>
 </Layout>
 
 <style is:global>
@@ -45,6 +97,11 @@ import { Filters } from '@/components/header/Filters'
 
   html {
     font-family: 'Visuelt Pro', system-ui;
+  }
+
+  .dark {
+    color: #e5e7eb; /* Un color claro para el texto en modo oscuro */
+    background-color: #1a202c; /* Un color de fondo oscuro */
   }
 
   @font-face {

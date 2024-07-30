@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       className='text-5xl font-bold text-white/75 cursor-pointer'
       onClick={() => resetFilters()}
       aria-label='Reset all filters'>
-      tsuki.
+      <a href='/'>tsuki.</a>
     </h1>
   )
 }
