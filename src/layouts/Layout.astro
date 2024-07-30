@@ -65,10 +65,10 @@ const { title, description } = Astro.props
     </style>
 
     <script>
-      const PUBLIC_SNIPCART = import.meta.env.PUBLIC_SNIPCART_API_KEY
+      const PUBLIC_VERCEL_ENV = import.meta.env.PUBLIC_VERCEL_ENV
 
       window.SnipcartSettings = {
-        publicApiKey: PUBLIC_SNIPCART,
+        publicApiKey: PUBLIC_VERCEL_ENV,
         loadStrategy: 'on-user-interaction',
         addProductBehavior: 'none',
         modalStyle: 'side'
