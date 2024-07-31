@@ -12,7 +12,7 @@
       ],
       "category": "One Piece",
       "label": "New",
-      "url": "/products/luffy-doa"
+      "url": "https://tsuki-store.vercel.app/realProducts.json"
     },
     {
       "id": "satoru-mini",
