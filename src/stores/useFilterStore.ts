@@ -22,7 +22,7 @@ const useFilterStore = create<FilterStore>((set, get) => ({
   filterProducts: (products) => {
     const { maxPrice, category, label } = get()
     return products?.filter((product) => {
-      const matchesPrice = product.price <= maxPrice
+      const matchesPrice = Number(product.price) <= maxPrice
       const matchesCategory =
         category === 'all' || category === product.category
       const matchesLabel = label === 'all' || product.label === label
@@ -33,6 +33,9 @@ const useFilterStore = create<FilterStore>((set, get) => ({
   filteredProducts: () => {
     const search = useStore(useSearchStore, (state) => state.search)
     const { filterProducts } = get()
+
+    /* @ts-ignore */
+
     return filterProducts(initialProducts as Product[]).filter((product) => {
       return (
         product.title.toLowerCase().includes(search.toLowerCase()) ||
