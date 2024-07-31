@@ -18,17 +18,5 @@ export function ToastAddCart({
     })
   }
 
-  return (
-    <Button
-      onClick={handleClick}
-      className='snipcart-add-item'
-      data-item-id={product.id}
-      data-item-price={product.price}
-      data-item-description={product.description}
-      data-item-image={product.images[0]}
-      data-item-name={product.title}
-      data-item-url={product.url}>
-      Agregar al carrito
-    </Button>
-  )
+  return <Button onClick={handleClick}>Agregar al carrito</Button>
 }
