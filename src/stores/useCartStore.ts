@@ -29,7 +29,7 @@ const useCartStore = create<CartStore>((set) => ({
       }
 
       const newTotalAmount = newCart.reduce(
-        (total, item) => total + Number(item.product.price) * item.quantity,
+        (total, item) => total + item.product.price * item.quantity,
         0
       )
 
@@ -56,7 +56,7 @@ const useCartStore = create<CartStore>((set) => ({
       }
 
       const newTotalAmount = newCart.reduce(
-        (total, item) => total + Number(item.product.price) * item.quantity,
+        (total, item) => total + item.product.price * item.quantity,
         0
       )
 
