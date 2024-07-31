@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { products as initialProducts } from '@/mocks/realProducts.json'
+import { products as initialProducts } from 'public/realProducts.json'
 import { useStore } from 'zustand'
 import { useSearchStore } from './useSearchStore'
 import type { Product, FilterStore } from '@/types/product'

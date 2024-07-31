@@ -23,11 +23,12 @@ export function ToastAddCart({
       onClick={handleClick}
       className='snipcart-add-item'
       data-item-id={product.id}
-      data-item-price={product.price}
+      data-item-price={product.price.toString()} // Convertir el precio a string
       data-item-description={product.description}
-      data-item-image={product.images[0]}
+      data-item-image={product.images[0]} // Usar la primera imagen del array
       data-item-name={product.title}
-      data-item-url='/products.json'>
+      data-item-url={product.url} // Asegúrate de que esta URL sea accesible públicamente
+    >
       Agregar al carrito
     </Button>
   )

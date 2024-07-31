@@ -6,6 +6,7 @@ export interface Product {
   description?: string
   category?: string
   label?: string
+  url?: string
 }
 
 export interface FilterStore {
