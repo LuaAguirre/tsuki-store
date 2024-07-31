@@ -21,8 +21,6 @@ export function ToastAddCart({
   return (
     <Button
       onClick={handleClick}
-      data-item-custom1-name='Talla'
-      data-item-custom1-options='S|M|L|XL'
       className='snipcart-add-item'
       data-item-id={product.id}
       data-item-price={product.price}
