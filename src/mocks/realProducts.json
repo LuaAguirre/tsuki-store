@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "luffy-doa",
       "title": "Luffy Gear 5 - Dead or Alive",
       "price": 59,
       "description": "Polo oversize de Luffy, One Piece.",
@@ -14,7 +14,7 @@
       "label": "New"
     },
     {
-      "id": 2,
+      "id": "satoru-mini",
       "title": "Satoru Gojo - Mini",
       "price": 59,
       "description": "Polo oversize de Satoru Gojo, Jujutsu Kaisen.",
@@ -27,7 +27,7 @@
       "label": "New"
     },
     {
-      "id": 3,
+      "id": "goku-kame",
       "title": "Goku - Kame",
       "price": 59,
       "description": "Polo overzise del traje de Kakaroto, Dragon Ball.",
@@ -40,7 +40,7 @@
       "label": "Discount"
     },
     {
-      "id": 4,
+      "id": "naruto-mini",
       "title": "Naruto Uzumaki - Mini",
       "price": 59,
       "description": "Polo oversize de Naruto Uzumaki, Naruto Shippuden.",
@@ -53,7 +53,7 @@
       "label": "Discount"
     },
     {
-      "id": 5,
+      "id": "inosuke-ub",
       "title": "Inosuke - Urban Beast",
       "price": 79,
       "description": "Polo oversize de Inosuke Hashibira (respiración de la bestia), Demon Slayer: Kimetsu No Yaiba.",
