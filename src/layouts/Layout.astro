@@ -4,9 +4,6 @@ import Header from '../components/Header.astro'
 import Footer from '@/components/Footer.astro'
 import { Toaster } from '@/components/ui/toaster'
 import { PaginationProducts } from '@/components/Pagination'
-import { SnipcartSetup } from '@lloydjatkinson/astro-snipcart/astro'
-import { CartCheckout } from '@lloydjatkinson/astro-snipcart/astro'
-import { Product as Prod } from '@lloydjatkinson/astro-snipcart/astro'
 
 interface Props {
   title: string
@@ -34,7 +31,6 @@ const { title, description } = Astro.props
       href='/favicon.svg'
     />
     <title>{title}</title>
-    <SnipcartSetup />
 
     <ViewTransitions />
   </head>
@@ -42,20 +38,7 @@ const { title, description } = Astro.props
   <body>
     <div class='px-4 md:px-16 lg:px-36 flex flex-col gap-12'>
       <Header />
-      <CartCheckout>
-        <button> Open basket </button>
-      </CartCheckout>
 
-      <Prod
-        as='span'
-        id='SKU-0001'
-        name='Standard T-Shirt'
-        url='/product/standard-t-shirt'
-        price={12.99}
-        description='Every day basic t-shirt'
-        image='/blue-t-shirt.jpg'>
-        <button> Add </button>
-      </Prod>
       <slot />
       <PaginationProducts />
       <Footer />
