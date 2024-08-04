@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { products as initialProducts } from 'public/realProducts.json'
+import initialProducts from 'products.json'
 import { useStore } from 'zustand'
 import { useSearchStore } from './useSearchStore'
 import type { Product, FilterStore } from '@/types/product'

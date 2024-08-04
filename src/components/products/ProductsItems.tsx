@@ -32,6 +32,16 @@ export function ProductsItems({ product }: ProductsItemProps) {
             product={product}
             handleAddToCart={handleAddToCart}
           />
+          <button
+            className='snipcart-add-item'
+            data-item-id={product.id}
+            data-item-image={product.images[0]}
+            data-item-price={product.price}
+            data-item-description={product.description}
+            data-item-url={`/products/${product.id}`}
+            data-item-name={product.title}>
+            Add to cart
+          </button>
         </div>
       </div>
     </li>
