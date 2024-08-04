@@ -1,9 +1,10 @@
 Tasks:
 
-- Fix url's products of Snipcart
+- Dark mode cart
 - Debounce
 - Edit footer (resources)
 - Create icon for head
+- Pay
 - Pagination or Infinite scroll when add more products
 - Handle Errors
 - i18n

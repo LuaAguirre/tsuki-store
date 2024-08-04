@@ -22,7 +22,7 @@ const useFilterStore = create<FilterStore>((set, get) => ({
   filterProducts: (products) => {
     const { maxPrice, category, label } = get()
     return products?.filter((product) => {
-      const matchesPrice = Number(product.price) <= maxPrice
+      const matchesPrice = product.price <= maxPrice
       const matchesCategory =
         category === 'all' || category === product.category
       const matchesLabel = label === 'all' || product.label === label
