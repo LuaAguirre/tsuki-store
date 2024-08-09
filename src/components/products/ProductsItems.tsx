@@ -12,6 +12,7 @@ export function ProductsItems({ product }: ProductsItemProps) {
   const handleAddToCart = (product: Product) => {
     setCart(product)
   }
+
   return (
     <li
       key={product.id}
