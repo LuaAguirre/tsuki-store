@@ -14,7 +14,7 @@ export function ToastAddCart({
   const handleClick = () => {
     handleAddToCart(product)
     toast({
-      description: 'Your product was added to the cart.'
+      description: 'Tu producto ha sido agregado al carrito.'
     })
   }
 
