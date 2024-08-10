@@ -44,7 +44,7 @@ export default function Cart() {
 
         <SheetContent className='bg-white/90 p-8 overflow-y-auto flex flex-col gap-4'>
           <SheetHeader>
-            <SheetTitle>Your Cart</SheetTitle>
+            <SheetTitle>Tu Carrito</SheetTitle>
             <SheetDescription>
               Make changes to your cart here. Click buy when you're done.
             </SheetDescription>
