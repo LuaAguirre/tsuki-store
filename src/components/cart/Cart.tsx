@@ -76,12 +76,12 @@ export default function Cart() {
                     <div>
                       <button
                         onClick={() => handleAddToCart(item.product)}
-                        className='p-1 rounded-sm hover:bg-gray-200'>
+                        className='p-1 rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800'>
                         +
                       </button>
                       <button
                         onClick={() => handleRemoveToCart(item.product)}
-                        className='p-1 rounded-sm hover:bg-gray-200'>
+                        className='p-1 rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800'>
                         -
                       </button>
                     </div>
@@ -96,10 +96,14 @@ export default function Cart() {
               <h2>Total: S/. {totalAmount.toFixed(2)}</h2>
 
               <div className='flex gap-4'>
-                <SheetClose asChild>
+                <SheetClose
+                  asChild
+                  className='p-3'>
                   <Button type='submit'>Comprar</Button>
                 </SheetClose>
-                <SheetClose asChild>
+                <SheetClose
+                  asChild
+                  className='px-3 py-5'>
                   <Button
                     type='submit'
                     variant='ghost'
