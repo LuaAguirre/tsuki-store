@@ -4,8 +4,8 @@ export default function IconCart({ count }: { count: number }) {
       <svg
         className='stroke-current text-gray-800 dark:text-white'
         xmlns='http://www.w3.org/2000/svg'
-        width='25'
-        height='25'
+        width='23'
+        height='23'
         viewBox='0 0 24 24'
         strokeWidth='1.5'
         stroke='#2c3e50'

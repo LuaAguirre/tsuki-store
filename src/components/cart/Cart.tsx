@@ -37,7 +37,7 @@ export default function Cart() {
     <div>
       <Sheet>
         <SheetTrigger asChild>
-          <button className='cart-button flex items-center z-20 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg p-1'>
+          <button className='cart-button flex items-center z-20 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg py-1 px-1.5'>
             <IconCart count={cartCount} />
           </button>
         </SheetTrigger>
