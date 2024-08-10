@@ -42,11 +42,12 @@ export default function Cart() {
           </button>
         </SheetTrigger>
 
-        <SheetContent className='bg-white/90 p-8 overflow-y-auto flex flex-col gap-4'>
+        <SheetContent className='bg-white/90 p-8 overflow-y-auto flex flex-col gap-4 dark:bg-zinc-900'>
           <SheetHeader>
             <SheetTitle>Tu Carrito</SheetTitle>
             <SheetDescription>
-              Make changes to your cart here. Click buy when you're done.
+              Haz cambios en tu carrito aquí, presiona comprar cuando estes
+              listo.
             </SheetDescription>
           </SheetHeader>
           <ul className='flex flex-col justify-center gap-4'>
@@ -66,7 +67,7 @@ export default function Cart() {
                   </div>
 
                   <div className='mt-1 text-sm opacity-80'>
-                    ${item.product.price}
+                    S/. {item.product.price}
                   </div>
 
                   <footer className='flex justify-end items-center gap-2'>
@@ -90,22 +91,21 @@ export default function Cart() {
             ))}
           </ul>
 
-          {/* Split Cart */}
           <SheetFooter>
             <div className=' w-96 flex justify-between items-center'>
-              <h2>Total: ${totalAmount.toFixed(2)}</h2>
+              <h2>Total: S/. {totalAmount.toFixed(2)}</h2>
 
               <div className='flex gap-4'>
                 <SheetClose asChild>
-                  <Button type='submit'>Buy</Button>
+                  <Button type='submit'>Comprar</Button>
                 </SheetClose>
                 <SheetClose asChild>
                   <Button
                     type='submit'
                     variant='ghost'
-                    className='hover:bg-gray-200'
+                    className='hover:bg-gray-200 dark:hover:bg-gray-800'
                     onClick={() => clearCart()}>
-                    Clear
+                    Borrar
                   </Button>
                 </SheetClose>
               </div>
