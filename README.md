@@ -1,7 +1,6 @@
 Tasks:
 
-- Debounce
 - Fix darkmode to change pages
-- Handle Errors
+- Debounce problem with astro
 - i18n
 - Pay
