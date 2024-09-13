@@ -42,14 +42,15 @@ export default function Cart() {
           </button>
         </SheetTrigger>
 
-        <SheetContent className='bg-white/90 p-8 overflow-y-auto flex flex-col gap-4 dark:bg-zinc-900'>
-          <SheetHeader>
-            <SheetTitle>Tu Carrito</SheetTitle>
-            <SheetDescription>
-              Haz cambios en tu carrito aquí, presiona comprar cuando estes
+        <SheetContent className='bg-white/90 p-8 overflow-y-auto flex flex-col gap-4 dark:bg-zinc-900 w-screen h-screen md:w-auto md:h-auto'>
+          <SheetHeader className='text-left'>
+            <SheetTitle className='text-left'>Tu Carrito</SheetTitle>
+            <SheetDescription className='text-left'>
+              Haz cambios en tu carrito aquí, presiona comprar cuando estés
               listo.
             </SheetDescription>
           </SheetHeader>
+
           <ul className='flex flex-col justify-center gap-4'>
             {cart.map((item: CartItem) => (
               <li
@@ -92,18 +93,14 @@ export default function Cart() {
           </ul>
 
           <SheetFooter>
-            <div className=' w-96 flex justify-between items-center'>
+            <div className='w-full flex justify-between items-center'>
               <h2>Total: S/. {totalAmount.toFixed(2)}</h2>
 
               <div className='flex gap-4'>
-                <SheetClose
-                  asChild
-                  className='p-3'>
+                <SheetClose asChild>
                   <Button type='submit'>Comprar</Button>
                 </SheetClose>
-                <SheetClose
-                  asChild
-                  className='px-3 py-5'>
+                <SheetClose asChild>
                   <Button
                     type='submit'
                     variant='ghost'
