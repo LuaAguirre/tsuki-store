@@ -8,6 +8,7 @@
 - Filtros por categorías y precio
 - Imágenes de productos cargadas solo cuando son visibles para optimizar el rendimiento
 - Soporte para modo oscuro y claro
+- Diseño Responsive totalmente optimizado para dispositivos móviles y de escritorio.
 
 ## 🚀 Tecnologías Utilizadas
 
