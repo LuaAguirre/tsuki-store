@@ -4,10 +4,18 @@ import { ProductsItems } from './products/ProductsItems'
 import { type Product } from '@/types/product'
 import { SkeletonCard } from './products/SkeletonCard'
 import { useState, useEffect } from 'react'
+import { useSearchStore } from '@/stores/useSearchStore'
 
 export function Products() {
   const filteredProducts = useFilterStore((state) => state.filteredProducts())
+  const fetchProducts = useFilterStore((state) => state.fetchProducts)
   const [loading, setLoading] = useState(true)
+  const search = useSearchStore((state) => state.search)
+  //const [filteredProducts, setFilteredProducts] = useState([])
+
+  useEffect(() => {
+    fetchProducts() // Llama a fetchProducts al montar el componente
+  }, [fetchProducts, search])
 
   useEffect(() => {
     if (filteredProducts.length > 0 && loading) {
