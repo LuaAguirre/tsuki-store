@@ -11,10 +11,9 @@ export function Products() {
   const fetchProducts = useFilterStore((state) => state.fetchProducts)
   const [loading, setLoading] = useState(true)
   const search = useSearchStore((state) => state.search)
-  //const [filteredProducts, setFilteredProducts] = useState([])
 
   useEffect(() => {
-    fetchProducts() // Llama a fetchProducts al montar el componente
+    fetchProducts()
   }, [fetchProducts, search])
 
   useEffect(() => {
